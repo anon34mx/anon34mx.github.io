@@ -3,4 +3,6 @@ import 'bootstrap';
 import jQuery from 'jquery';
 window.$ = jQuery;
 
-alert("ok");
+$(document).ready(function(){
+    // alert("listo");
+});
