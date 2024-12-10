@@ -17,8 +17,5 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
-    {
-        //
-    }
+    public function boot() { if ($this->app->runningInConsole()) { \URL::forceRootUrl(env('APP_URL_EXPORTER')); \URL::forceScheme('https'); } }
 }
