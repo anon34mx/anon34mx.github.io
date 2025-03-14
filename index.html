@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Aarón Aguilera</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -27,6 +28,12 @@
                         $("main").html(data);
 
                         window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?page="+url);
+
+                        // document.getElementById('sidebarToggle').click();
+                        if(window.innerWidth<992 && $("body").hasClass("sb-sidenav-toggled")){
+                            console.log("ocultar menu");
+                            document.getElementById('sidebarToggle').click();
+                        }
                     },
                     error: function (e) { console.log(e.message); }
                 });
@@ -50,6 +57,13 @@
         function getParameters(param){
             var url = new URL(location.href);
             return url.searchParams.get(param);
+        }
+
+        var experiencia=null;
+        function getExp(){
+            let inicio= new Date("2018-10-01 09:00:00");
+            let ahora=new Date();
+            let diff=ahora-incio;
         }
     </script>
 </head>
@@ -92,7 +106,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">About</div>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" onclick="$('body').loadHTML('index_main.html');">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                             Personal
                         </a>
@@ -150,7 +164,7 @@
                                 <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                             </nav>
                         </div> -->
-                        
+
                         <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                             aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
