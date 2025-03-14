@@ -52,6 +52,8 @@
             }else{
                 $('body').loadHTML(page);
             }
+
+            
         });
 
         function getParameters(param){
@@ -61,9 +63,33 @@
 
         var experiencia=null;
         function getExp(){
-            let inicio= new Date("2018-10-01 09:00:00");
-            let ahora=new Date();
-            let diff=ahora-incio;
+            var inicio= new Date("2018-10-01 09:00:00");
+            var ahora=new Date();
+            var diff=ahora-inicio;
+
+            let ms = diff % 1000;
+            let ss = Math.floor(diff / 1000) % 60;
+            let mm = Math.floor(diff / 1000 / 60) % 60;
+            let hh = Math.floor(diff / 1000 / 60 / 60);
+
+            let d = Math.floor(hh/24);
+            let m = Math.floor(d/30.4);
+            let years = Math.floor(hh / 24 / 30.4 / 12);
+            let months = Math.floor(m - years*12);
+
+            return years+" años, "+months+" meses";
+            /*
+            console.log(
+"ms -> " + ms + "\n"+
+"ss -> " + ss + "\n"+
+"mm -> " + mm + "\n"+
+"hh -> " + hh + "\n"+
+"d -> " + d + "\n"+
+"m -> " + m + "\n"+
+"years -> " + years + "\n"+
+"months -> " + months + "\n"+
+           "" );
+           */
         }
     </script>
 </head>
@@ -76,7 +102,7 @@
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" onsubmit="return false;">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
                     aria-describedby="btnNavbarSearch" />
@@ -122,16 +148,16 @@
                         </a>
                         <div class="collapse" id="collapseProjects" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="layout-static.html">Parhikuni.com</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">Horarios/Paquetería</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">VIA</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">S.M.O.V.I.</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">Hostess</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">Reclutamiento</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">kuniticket</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">Chatbot</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">DTI/directorio</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">Sistema Integral</a>
+                                <a class="nav-link" onclick="layout-static.html">Parhikuni.com</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">Horarios/Paquetería</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">VIA</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">S.M.O.V.I.</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">Hostess</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">Reclutamiento</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">kuniticket</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">Chatbot</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">DTI/directorio</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">Sistema Integral</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#proyectosPersonales" aria-expanded="false"
@@ -142,8 +168,9 @@
                         </a>
                         <div class="collapse" id="proyectosPersonales" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="layout-sidenav-light.html">HomePagePro</a>
-                                <a class="nav-link" href="layout-sidenav-light.html">PC Ally</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">HomePagePro</a>
+                                <a class="nav-link" onclick="layout-sidenav-light.html">PC Ally</a>
+                                <a class="nav-link" onclick="$('body').loadHTML('proyectospersonales/rainmeter_mirrorsEdge.html');">Rainmeter - Tema Mirror's Edge</a>
                             </nav>
                         </div>
                         <a class="nav-link" onclick="$('body').loadHTML('contacto.html');">
