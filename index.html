@@ -40,8 +40,29 @@
             }
     </script>
     <style>
+        *{
+            outline: 1px solid yellowgreen;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+        }
         nav-link{
             cursor: pointer !important;
+        }
+
+        section{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        h2{
+            position: sticky;
+            top: 0px;
+        }
+        p{
+            text-align: justify;
         }
     </style>
     <script>
