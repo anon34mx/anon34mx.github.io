@@ -28,34 +28,67 @@
                         $("main").html(data);
 
                         window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
-
-                        // document.getElementById('sidebarToggle').click();
-                        if(window.innerWidth<992 && $("body").hasClass("sb-sidenav-toggled")){
-                            console.log("ocultar menu");
-                            document.getElementById('sidebarToggle').click();
-                        }
                     },
-                    error: function (e) { console.log(e.message); }
+                    error: function (e) {
+                        console.log(e.message);
+                        $.ajax({
+                            type: 'GET',
+                            url: "404.html",
+                            success: function (data) {
+                                $("main").empty();
+                                $("main").html(data);
+                            },
+                            error: function (e) {
+                                console.log(e.message);
+                            }
+                        });
+                    }
                 });
+                ocultarSidebarResponsivo();
             }
+
+        function ocultarSidebarResponsivo(){
+            if (window.innerWidth < 992 && $("body").hasClass("sb-sidenav-toggled")) {
+                console.log("ocultar menu");
+                document.getElementById('sidebarToggle').click();
+            }
+        }
     </script>
     <style>
         *{
             outline: 1px solid yellowgreen;
         }
         html,body{
-            height: 100%;
-            width: 100%;
-            overflow: auto;
+            
         }
         nav-link{
             cursor: pointer !important;
         }
 
+        main{
+
+        }
+        .titulo{
+            position: sticky;
+            top: 56px;
+            background: white;
+        }
         section{
-            display: flex;
+            /* display: inline-flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: wrap; */
+            line-break: auto;
+        }
+        .lineaSeparador {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 3px;
+            float: inline-start;
+            border-top: 2px solid red;
+            margin: 1rem 0;
+            background-color: red;
+            z-index: -1;
         }
         h2{
             position: sticky;
@@ -63,6 +96,10 @@
         }
         p{
             text-align: justify;
+        }
+        figure figcaption{
+            font-style: italic;
+            text-align: center;
         }
     </style>
     <script>
@@ -135,7 +172,7 @@
             </div>
         </form>
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -148,14 +185,44 @@
                     <li><a class="dropdown-item" href="#!">Logout</a></li>
                 </ul>
             </li>
-        </ul>
+        </ul> -->
+        <div style="
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                z-index: -1;
+                filter: opacity(0.5);
+                background: url(./assets/img/circuit-board-911636_640.jpg);
+                background-size: cover;
+                opacity:0.3;
+            ">
+        </div>
+        <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                z-index: -1;
+                filter: opacity(0.5);
+                background: url(./assets/img/technology-1283624_640.jpg);
+                background-repeat: no-repeat;
+                opacity:0.3;
+            ">
+        </div>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">About</div>
+                        <!-- <div class="sb-sidenav-menu-heading">About</div> -->
+                        <a class="nav-link" onclick="$('body').loadHTML('plantilla');">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
+                            plantilla
+                        </a>
                         <a class="nav-link" onclick="$('body').loadHTML('index_main');">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                             Personal
@@ -172,6 +239,7 @@
                         </a>
                         <div class="collapse" id="collapseProjects" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni.com');">Parhikuni.com</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-horarios');">Horarios/Paquetería</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-via');">VIA</a>

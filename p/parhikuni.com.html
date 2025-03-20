@@ -1,31 +1,139 @@
-<h2>Parhíkuni.com</h2>
-<div class="container-fluid px-4 pt-3">
+<div class="col-12 row mx-0 px-2 blogCont">
+    <h1 class="titulo">Parhíkuni.com</h1>
     <section>
         <figure class="mx-3 my-2 col-6 col-md-4" style="float:right;">
-            <img src="./p/parhikuni.com.png"  alt="Vista previa de Parhikuni.com" width="100%">
+            <img src="./p/parhikuni.com/parhikuni.com.png" alt="Vista previa de Parhikuni.com" width="100%">
             <a href="https://parhikuni.com/">
                 <figcaption>Ir a Parhikuni.com</figcaption>
             </a>
         </figure>
-        <!-- <p> -->
-            Esta es la web principal ante el público de Destinos Parhíkuni SA de CV, aquí se promociona la venta en línea y se publicitan los distintos servicios que ofrece la empresa: viajes de ruta, paquetería y alquiler de autobuses.
-        <!-- </p> -->
+        Esta es la web principal ante el público de Destinos Parhíkuni SA de CV, aquí se promociona la venta en línea y se publicitan los distintos servicios que ofrece la empresa: viajes de ruta, paquetería y alquiler de autobuses.
+        <br>
+        Este sitio web cuenta con una interface moderna, adaptativa y responsiva para brindar la mejor experiencia al cliente desde cualquier resolución de pantalla, fácil legibilidad del texto, el texto es completamente responsivo, y visualmente atractiva. 
+        <br>
+        Este sistema fue creado con PHP, utilizando el framework Laravel, bootstrap y para la base dedatos MySql.
     </section>
+    <div class="lineaSeparador"></div>
     <section>
-        <p>
-            Este sitio web cuenta con una interface moderna, adaptativa y responsiva para brindar la mejor experiencia al cliente desde cualquier resolución de pantalla, fácil legibilidad del texto, el texto es completamente responsivo, y visualmente atractiva. Este sistema fue creado con PHP, utilizando el framework Laravel, bootstrap y para la base dedatos MySql.
-        </p>
-    </section>
-    <section>
-        <p>
-            En la sección de Destinos encontramos los lugares a dónde podemos viajar y los medios de contacto para cada oficina; en Factura, una breve guía de cómo tramitar la factura de su compra; el Blog, es la nueva sección donde publicamos noticias y momentos importantes para la empresa, este cuenta con su propio editor de texto (privado) hecho a medida; la sección de ayuda es donde se recopilan las preguntas frecuentes sobre el servicio y en la sección de nosotros se habla sobre la historia de la empresa.
-        </p>
-        <p>
-            Un complemento a este sitio es el cambio visual que se hizo en https://ventas.parhikuni.com.mx, donde cambiamos los estilos CSS. 
-        </p>
-        <figure class="mx-auto my-2 col-12 col-md-9 " style="float:left;">
-            <img src="./p/dibujo-metro.svg" alt="" width="100%">
-            <figcaption>Animación descartada</figcaption>
+        <b>Animaciones</b>
+        <br>
+        <figure class="mx-auto my-2 col-12 col-md-6 " style="float:left;">
+            <img src="./p/parhikuni.com/dibujo-metro.svg" alt="" width="100%">
+            <figcaption>Animación descartada en SVG que muestra las rutas estilo mapa de metro</figcaption>
         </figure>
+
+        <div class="col-12 col-md-6 mx-3" style="position: relative;float: left;display: block;width: 300px;height: 300px;">
+            <figure class="mx-auto my-2 col-12 col-md-6 " style="float:left;">
+                <div id="pantallaCarga" class="cargando-24" style="display: block;">
+                    <img class="lineas" src="https://parhikuni.com/resources/img/Loading_0.svg" alt="">
+                    <img class="p" src="https://parhikuni.com/resources/img/Loading_1.svg" alt="">
+                    <!-- <i>Pantalla de carga con CSS</i> -->
+                </div>
+                <figcaption>Animación descartada en SVG que muestra las rutas estilo mapa de metro</figcaption>
+            </figure>
+        </div>
+        <style>
+            /* PANTALLA DE CARGA */
+            .cargando-24 {
+                display: block;
+                width: 300px;
+                height: 300px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                z-index: 100;
+                background: white;
+            }
+
+            .cargando-24 img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                aspect-ratio: 4 / 4;
+            }
+            .cargando-24 .lineas {
+                width: 250px;
+                height: 250px;
+                max-width: 70vw;
+                max-height: 70vh;
+                transform: translate(-50%, -50%) rotate(0deg);
+                animation: girar 5s linear infinite;
+                animation-direction: reverse
+            }
+
+            .cargando-24 .p {
+                width: 100px;
+                height: 100px;
+            }
+            @keyframes girar {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+        </style>
+    </section>
+    <section>
+        <div class="lineaSeparador"></div>
+        <p>
+            En la sección de Destinos encontramos los lugares a dónde podemos viajar y los medios de contacto para cada oficina;
+            en Factura, una breve guía de cómo tramitar la factura de su compra; el Blog, es la nueva sección donde publicamos
+            noticias y momentos importantes para la empresa, este cuenta con su propio editor de texto (privado) hecho a medida;
+            la sección de ayuda es donde se recopilan las preguntas frecuentes sobre el servicio y en la sección de nosotros se
+            habla sobre la historia de la empresa.
+        </p>
+        <div class="lineaSeparador"></div>
+    </section>
+    <section>
+        <figure class="mx-auto my-2 col-12 col-md-3 " style="float:left;">
+            <img src="./p/parhikuni.com/venta.parhikuni.png" alt="" width="100%">
+            <figcaption>venta.parhikuni.com</figcaption>
+        </figure>
+        <p>
+            Un complemento a este sitio es el cambio visual que se hizo en https://ventas.parhikuni.com.mx, donde cambiamos los
+            estilos CSS.
+        </p>
+    </section>
+    <section>
+        <h4>Blog</h4>
+        <p>
+            Añadí un editor de texto privado para el blog, este editor es muy sencillo y sólo permite texto plano, pero es suficiente para las necesidades de la empresa. Funciona con algunos atributos html y css pero para minimizar el uso de estos lenguajes se manejan los elementos multimedia con la misma sintaxis de los objetos Json.
+        </p>
+        <code>
+            {
+                "tipo":"image",
+                "id":1,
+                "titulo":"imagen a la derecha,
+                 en línea con el texto",
+                "alinear":"derecha"
+            }
+        </code>
+        <p>
+            Después se procesa el texto con funciones bien perronas, de PHP para renderizar el texto en html.
+            <br>
+            Primero se encuentra el patró de texto <i>{ "" : "" }</i> con la función <i>preg_replace_callback</i>, se le envía como argumentos la clase y la función que procesará el texto y el texto a procesar.
+        </p>
+        <code>
+            $reemp=preg_replace_callback(
+            '/{.*?}/',
+            [$this,'procesarJson'],
+            $this->descripcion
+            );
+        </code>
+        <p>
+            Dependiendo del tipo de contenido se puede recuperar imagenes, videos, audios, previamente subidos, se les da un tamaño, alineación, texto descriptivo o si es código de ejemplo se escapa el texto.
+            <br>
+            <b>Resultado:</b>
+        </p>
+<code><pre>&lt;figure class="col-12 col-md-6 multimedia-post enable-preview" style=" float:left; "&gt;
+    &lt;img class="media-content" src="https://parhikuni.com/resources/img/blog/1__parhikuniwhatsapplogo.jpg"
+        title="imagen a la izquierda, precedida por un salto de línea"&gt;
+    &lt;figcaption&gt;&lt;i class="multimeda-titulo"&gt;imagen a la izquierda, precedida por un salto de línea&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre></code>
     </section>
 </div>
