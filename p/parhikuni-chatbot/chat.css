@@ -1,0 +1,669 @@
+/*
+	COLORES
+*/
+:root{
+	--rojo:#ca0700;
+	--rojoHover:#fe3a1c;
+	--gris:#e8e8e8;
+	--rosa:#f3c6c6;
+}
+/*@font-face {
+  font-family: 'globe';
+  src:url('/fonts/URW Globe W01 Over Weight.ttf') format('truetype');
+}
+*/
+html{
+	/* height: 100%; */
+}
+body{
+	/* width: 100%;
+	height: 100%; */
+	/*background: cadetblue;*/
+	padding: 0px;
+	margin: 0px;
+	font-family: arial;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--rojo); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.usuconectad{
+	width:100%;
+
+	height: 100%;
+	/*background-color: blue;*/
+}
+
+#captchat{
+	/*display:none;*/
+	/*margin-top: 8px;*/
+}
+#captchat input{
+	width: calc(100% - 180px);
+}
+#recaptcha{
+	background:url('../imagenes/refresh.svg');
+	width:41px;
+	height:41px;
+	float:left;
+	cursor:pointer;
+	background-size: contain;
+}
+#codecatch{
+	width: 130px;
+	height: 40px;
+	background: gray;
+}
+#centracapt{
+width:71%;
+margin:0 auto;
+}
+#centracapt img{
+float:left;
+}
+ input{
+width:29%;
+height:40px;
+border:2px solid #ca9d96;
+}
+.selectDate{
+	border: 1px solid black;
+	border-radius: 10px;
+	color: black;
+	font-size: 20px;
+	margin: -8px 5px;
+	height: 33px;
+	display: flex;
+	cursor: pointer;
+	min-width: 170px;
+	width: 170px;
+}
+.incorrecto{
+font-size:13px;
+color:#860C0F;
+
+}
+.conversacion_us{
+	width: calc(100% - 30px);
+	height:auto;
+	border-radius: 12px;
+	margin: 10px 0px;
+	background-color: var(--rosa);
+	font-size: 16px;
+}
+.conversacion_us .divContainerUp{
+}
+.msg_cliente{
+	background-color: white;
+	margin-left: 30px;
+}
+
+#contechats{
+	width:calc(100% - 30px);
+	height:auto;
+	/*min-height: 80%;*/
+	background:var(--rojo);
+	color:white;
+	overflow:hidden;
+	margin: 10px auto ;
+
+	display: block;
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);*/
+	border-radius: 10px;
+}
+
+#contechats h1{
+	margin:0;
+	font-size:25px;
+	padding-left:4px;
+	width:100%;
+	float:left;
+	text-align: center;
+	height: 34px;
+	margin: 13px 0px 10px 0px;
+}
+
+#cerrardefini{
+	width:28%;
+	float:left;	
+}
+
+#cerrardefini img{
+float:right;
+margin-top:5px;
+cursor:pointer;
+} 
+
+.contefondochat{
+	float:left;
+	width:100%;
+	height: calc(100% - 94px);
+}
+#fondoconten{
+	width: calc(100% - 12px);
+	height:100%;
+	background:var(--gris);
+	color:#575759;
+	margin:0 auto;
+	text-align:center;
+	/*padding-top:8px;*/
+	overflow:hidden;
+	overflow-y:auto;
+	margin-bottom:5px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+#fondoconten .avatar{
+	border-radius: 100%;
+	border: 6px solid white;
+	background: white;
+	width: 90px;
+	height: 90px;
+	margin: 18px 0px;
+}
+
+.rowschat{
+	width:100%;
+	height:60px;
+}
+
+.rowschats1{
+	width:100%;
+	/*height:75px;*/
+}
+.activa_r{
+	display:block;
+}
+
+#nodisponible{
+ display:none;
+}
+
+.rowschat input{
+	width:70%;
+	height:40px;
+	border:0px solid #ca9d96;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.rowsenvio{
+	width:100%;
+	height:70px;
+	float:left;
+}
+
+.btnchats{
+	background: var(--rojo);
+	display: block;
+	cursor: pointer;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top:8px;
+	font-size: 18px;
+	font-weight: bold;
+	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#chatahora{
+	width: 186px;
+	height: 32px;
+	margin:0 auto;
+	margin-bottom:7px;
+	display:block;
+}
+
+#enviamensaj{
+	width: 186px;
+	height: 32px;
+	margin:0 auto;
+	margin-bottom:7px;
+	display:none;
+	margin-top:10px;
+	
+}
+
+#mensaje_send{
+	width:70%;
+	height:70px;
+	margin:0 auto;
+
+	border: 0px solid #ca9d96;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#fondoconten p{
+	width:70%;
+	margin:0px;
+	/*margin-bottom:7px;*/
+}
+#redeschat{
+	width:90%;
+	margin:0 auto;
+	height:50px;
+	margin-top:5px;
+	margin-bottom: 10px;
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+#redeschat .linkRedSoc{
+	/*float: right;*/
+}
+#redeschat img{
+	float:left;
+	margin-left:10px;
+	margin-bottom:10px;
+	cursor:pointer;
+
+	width: 49px;
+	height: 49px;
+	border-radius: 8px;
+}
+
+label.error{
+	color:#860C0F;
+	font-size:13px;
+	display:block;
+	margin-top:-17px;
+}
+#tituloschats{
+	width:100%;
+	/*float:left;*/
+	height: 54px;
+	/*margin: 10px 0px;*/
+}
+
+#liston{
+	height:90px;
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	background:white;
+	color:black;
+	position:relative;
+	z-index:0;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 1px solid var(--rojo);
+}
+
+#liston img{
+	position:absolute;
+	float:left;
+	z-index: 1;
+
+	width: 90px;
+	height: 90px;
+	/* top: 20px; */
+	left: 0;
+	border: 1px solid var(--gris);
+}
+
+#areachats{
+	width:98%;
+	margin:0 auto;
+	height:calc(100% - 78px);
+	/*height:calc(100% - 150px);*/
+	/*background: green;*/
+	/*overflow-y: scroll;*/
+	/*overflow-x: hidden;*/
+}
+
+#emails{
+	border: 1px solid var(--rojo);
+    height: 56px;
+    width: calc(100% - 94px);
+    border-radius: 10px;
+    margin: 0px 0px 10px 10px;
+    resize: none;
+}
+
+#envioemails{
+	padding: initial;
+
+	border: none;
+	border-radius: 10px;
+	width: 54px;
+	height: 54px;
+	margin: 2px 12px;
+	font-size: 1.4em;
+}
+
+#inforclient{
+	/*float:right;*/
+	/*width:300px;*/
+	height: inherit;
+	left: 110px;
+	position: relative;
+	text-align: left;
+	/*padding-left: 20px;*/
+	/*border: 1px solid green;*/
+}
+#inforclient span{
+	height: 50%;
+	background-color: white;
+	width: 100%;
+	position: relative;
+	display: block;
+	margin: 0px;
+	padding: 0px 10px;
+}
+#nom_client{
+	color: var(--rojo);
+	font-weight: bold;
+}
+#inforclient span p{
+	padding-top: 5px;
+	width: 100%;
+}
+.msgs{
+	margin-top:10px;
+	width:100%;
+	float:left;
+	height:auto;
+	margin-bottom:10px;
+}
+
+.calloutUp { 
+height: 0; 
+width: 0; 
+border-bottom: 12px solid #ffffff; 
+border-left: 12px dotted transparent; 
+border-right: 12px dotted transparent; 
+left: 0px; 
+top: 0px; 
+margin-left: 20px; 
+z-index: 10; 
+display: none;
+} 
+
+.calloutUp1 { 
+height: 0; 
+width: 0; 
+border-bottom: 12px solid #ffffff; 
+border-left: 12px dotted transparent; 
+border-right: 12px dotted transparent; 
+left: 0px; 
+top: 0px; 
+margin-left: 550px; 
+z-index: 10;
+display: none;
+} 
+
+.calloutUp2 { 
+position: relative; 
+left: 270px; 
+top: 25px;
+height: 0; 
+width: 0; 
+border-bottom: 10px solid #ebeaea; 
+border-left: 10px dotted transparent; 
+border-right: 10px dotted transparent; 
+z-index: 11;
+display: none;
+}
+
+.divContainerUp {
+	/*background-color: #ebeaea; */
+	/*border: solid 1px #ffffff; */
+	position: relative; 
+	top: -1px;
+	/*z-index: 9; */
+	/*width:95%; */
+	margin:0 auto;
+	/*padding: 4px; */
+	/*border-radius:7px;	*/
+	height:auto;
+	/*margin-top:22px;*/
+
+	width: calc(100% - 40px);
+	padding: 8px 20px;
+	background-color: transparent;
+	border: none;
+	margin-top: 0px;
+	text-align: left;
+}
+
+.nombres_pers{
+/*float:left;
+display:block;
+position:relative;
+margin-left:20px;*/
+}
+
+.nombres_pers,.nombres_pers1{
+	display:block;
+	position:relative;
+	padding: 10px 10px 0px 10px;
+	width: calc(100% - 20px);
+	text-align: left;
+	color: var(--rojo);
+	font-weight: bold;
+	/*font-size: 1.1em;*/
+}
+
+.nombres_pers1 p{
+	width: 100%;
+}
+
+.calloutUp21{
+position: relative; 
+left: 0; 
+top: 25px;
+height: 0; 
+width: 0; 
+border-bottom: 10px solid #ebeaea; 
+border-left: 10px dotted transparent; 
+border-right: 10px dotted transparent; 
+z-index: 11; 
+}
+
+.usuconectad .content{
+	height: 100%;
+}
+
+#mCSB_4{
+	overflow-y: scroll !important;
+	overflow-x: hidden !important;
+}
+ /*
+ BOT PRRON
+ aaron aguilera
+ octubre 2020
+ a.non34@hotmail.com
+ */
+
+#bot {
+    /*background-color: mediumpurple;*/
+    width: 100%;
+    height: 80px;
+    padding: 0px 10px;
+}
+.cont-bot{
+	/*background-color: orange;*/
+	width: calc(100% - 20px);
+	height: calc(100% - 8px);
+	padding: 18px 0px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	display: flex;
+}
+.chat-btn{
+	border: none;
+	background-color: var(--rojo);
+	border-radius: 10px;
+	color: white;
+	font-size: 20px;
+	padding: 4px 7px;
+	margin: -8px 5px;
+
+    /*height: max-content;*/
+    height: 35px;
+	display: flex;
+	cursor: pointer;
+}
+.chat-btn:hover{
+	background-color: var(--rojoHover);
+}
+.chat-btn span{
+	width: max-content;
+	display: inline-flex;
+}
+/******/
+#contechats{
+	/* height: calc(100% - 08px); */
+	height: 600px;
+	max-height: 90vh;
+}
+
+.rowsenvio{
+	display: inline-flex;
+	top: -64px;
+	position: relative;
+}
+.typing{
+	background-color: var(--gris);
+	position: relative;
+	top: -15px;
+	width: calc(100% - 14px);
+	height: 15px;
+	text-align: left;
+	display: none;
+}
+
+.btn-enRespuesta{
+	width: fit-content;
+	/* height: 20px; */
+	margin: 8px auto 0px auto;
+	text-decoration: none;
+}
+.img-enRespuesta{
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+}
+.serbisio{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: red;
+	border: 2px solid black;
+	position: relative;
+	margin: 2px 3px 2px 0px;
+}
+.bg-EX{
+	background-color: #eb1823;
+}
+.bg-PC{
+	background-color: #383838;
+}
+.bg-PL{
+	background-color: #0079d9;
+}
+.bg-BC{
+	background-color: #fff000;
+}
+.bg-UL{
+	background-color: #846ee6;
+}
+.bg-TU{
+	background-color: #fa6400;
+}
+/*
+#contechats{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	height: calc(100% - 50px) !important;
+	max-height: 100%;
+	width: calc(100% - 30px);
+	transform: translate(-50%,-50%);
+}
+
+#fondoconten{
+	overflow: auto;
+}*/
+
+@media only screen and (max-width: 600px) {
+	.divContainerUp{
+		/*font-size: 14px !important;*/
+	}
+	#contechats h1{
+		font-size: 20px;
+		width: auto;
+		margin-left: 14px;
+	}
+	.chat-btn{
+		font-size: 15px;
+	}
+	#liston img {
+		width: 58px;
+		height: 58px;
+		position: initial;
+	}
+	#inforclient{
+		left: 60px;
+	}
+
+	#contechats h1{
+		font-size: 22px;
+		margin: 17px 0px 10px 0px;
+		height: auto;
+	}
+
+	.rowschat input{
+		width: 90%;
+	}
+	#centracapt {
+	    width: 91%;
+	}
+	#avatar{
+		position: initial;
+	}
+}
+
+.tarifa{
+	font-weight: bold;
+}
+.tachadoDescuento{
+	text-align: end;
+	font-size: 0.8em;
+	text-decoration: line-through;
+	opacity: 0.7;
+}
+@media only screen and (max-width: 380px) {
+	#contechats h1{
+		font-size: 14px;
+		margin-left: 10px;
+	}
+}
