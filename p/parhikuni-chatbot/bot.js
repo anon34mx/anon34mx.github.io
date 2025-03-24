@@ -1083,7 +1083,9 @@ function formatDate(date) {
 
   return [year, month, day].join('-');
 }
-
+function habilitarChat(){
+  alert("No disponible");
+}
 //
 /*
 contacto

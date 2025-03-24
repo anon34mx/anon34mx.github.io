@@ -1,7 +1,7 @@
 <div class="col-12 row mx-0 px-2 blogCont">
     <h1 class="titulo">Parhíkuni.com</h1>
     <section>
-        <figure class="mx-3 my-2 col-6 col-md-4" style="float:right;">
+        <figure class="col-6 col-md-4 mx-2 my-2" style="float:right;">
             <img src="./p/parhikuni.com/parhikuni.com.png" alt="Vista previa de Parhikuni.com" width="100%">
             <a href="https://parhikuni.com/">
                 <figcaption>Ir a Parhikuni.com</figcaption>
@@ -17,21 +17,18 @@
     <section>
         <b>Animaciones</b>
         <br>
-        <figure class="mx-auto my-2 col-12 col-md-6 " style="float:left;">
+        <figure class="mx-auto mx-2 my-2 col-12 col-md-6 " style="float:left;">
             <img src="./p/parhikuni.com/dibujo-metro.svg" alt="" width="100%">
             <figcaption>Animación descartada en SVG que muestra las rutas estilo mapa de metro</figcaption>
         </figure>
 
-        <div class="col-12 col-md-6 mx-3" style="position: relative;float: left;display: block;width: 300px;height: 300px;margin-bottom: 40px;">
-            
+        <div class="col-12 col-md-6 mx-auto my-2 mb-4" style="position: relative;float: left;display: block;width: 300px;height: 300px;margin-bottom: 40px;z-index: 0;">
                 <div id="pantallaCarga" class="cargando-24" style="display: block;">
                     <img class="lineas" src="https://parhikuni.com/resources/img/Loading_0.svg" alt="">
                     <img class="p" src="https://parhikuni.com/resources/img/Loading_1.svg" alt="">
                     <!-- <i>Pantalla de carga con CSS</i> -->
-                    <i style="
-                        position: absolute;
-                        bottom: -40px;
-                    ">Pantalla de carga en CSS</i>
+                    <div style="position: absolute;bottom: -10px;width: 100%;text-align: center;background: white;
+                    ">Pantalla de carga en CSS</div>
                 </div>
         </div>
         <style>
@@ -81,7 +78,7 @@
     </section>
     <section>
         <div class="lineaSeparador"></div>
-        <p>
+        <p class="px-2">
             En la sección de Destinos encontramos los lugares a dónde podemos viajar y los medios de contacto para cada oficina;
             en Factura, una breve guía de cómo tramitar la factura de su compra; el Blog, es la nueva sección donde publicamos
             noticias y momentos importantes para la empresa, este cuenta con su propio editor de texto (privado) hecho a medida;
@@ -91,18 +88,22 @@
         <div class="lineaSeparador"></div>
     </section>
     <section>
-        <figure class="mx-auto my-2 col-12 col-md-3 " style="float:left;">
-            <img src="./p/parhikuni.com/venta.parhikuni.png" alt="" width="100%">
+        <figure class="mx-auto mx-2 my-2 col-12 col-md-3 mx-2" style="float:left;">
+            <img src="./p/parhikuni.com/venta.parhikuni.png" alt="" width="100%" onclick="imgPreview(this)">
             <figcaption>venta.parhikuni.com</figcaption>
         </figure>
-        <p>
+        <figure class="mx-auto mx-2 my-2 col-12 col-md-3 mx-2" style="float:left;">
+            <img src="./p/parhikuni.com/venta.parhikuni.asientos.PNG" alt="" width="100%" onclick="imgPreview(this)">">
+            <figcaption>venta.parhikuni.com</figcaption>
+        </figure>
+        <p class="px-2">
             Un complemento a este sitio es el cambio visual que se hizo en https://ventas.parhikuni.com.mx, donde cambiamos los
             estilos CSS.
         </p>
     </section>
     <section>
         <h4>Blog</h4>
-        <p>
+        <p class="px-2">
             Añadí un editor de texto privado para el blog, este editor es muy sencillo y sólo permite texto plano, pero es suficiente para las necesidades de la empresa. Funciona con algunos atributos html y css pero para minimizar el uso de estos lenguajes se manejan los elementos multimedia con la misma sintaxis de los objetos Json.
         </p>
         <code>
@@ -114,7 +115,7 @@
                 "alinear":"derecha"
             }
         </code>
-        <p>
+        <p class="px-2">
             Después se procesa el texto con funciones bien perronas, de PHP para renderizar el texto en html.
             <br>
             Primero se encuentra el patró de texto <i>{ "" : "" }</i> con la función <i>preg_replace_callback</i>, se le envía como argumentos la clase y la función que procesará el texto y el texto a procesar.
@@ -126,7 +127,7 @@
             $this->descripcion
             );
         </code>
-        <p>
+        <p class="px-2">
             Dependiendo del tipo de contenido se puede recuperar imagenes, videos, audios, previamente subidos, se les da un tamaño, alineación, texto descriptivo o si es código de ejemplo se escapa el texto.
             <br>
             <b>Resultado:</b>

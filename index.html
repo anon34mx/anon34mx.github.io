@@ -81,6 +81,7 @@
             position: sticky;
             top: 56px;
             background: white;
+            z-index: 1;
         }
         section{
             /* display: inline-flex;
@@ -119,7 +120,7 @@
             height: 100vh;
             background: black;
             position: fixed;
-            z-index: 1;
+            z-index: 2;
             top: 0;
             left: 0;
         }
@@ -129,6 +130,7 @@
             height: 100%;
         }
         #christian-modal div *{
+            width: auto;
             max-width: 90%;
             max-height: 90%;
             left: 50%;
@@ -227,7 +229,7 @@
         </div>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" onclick="$('body').loadHTML('index_main');">🏠 Aarón Aguilera</a>
+        <a class="navbar-brand ps-3" onclick="$('body').loadHTML('index_main');">🏠 Inicio</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -277,10 +279,10 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <!-- <div class="sb-sidenav-menu-heading">About</div> -->
-                        <a class="nav-link" onclick="$('body').loadHTML('plantilla');">
+                        <!-- <a class="nav-link" onclick="$('body').loadHTML('plantilla');">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                             plantilla
-                        </a>
+                        </a> -->
                         <a class="nav-link" onclick="$('body').loadHTML('index_main');">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                             Personal
@@ -301,7 +303,7 @@
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni.com');">Parhikuni.com</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-horarios');">Horarios/Paquetería</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-via');">VIA</a>
-                                <a class="nav-link" onclick="$('body').loadHTML('p/smovi');">S.M.O.V.I.</a>
+                                <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-smovi');">S.M.O.V.I.</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-hostess');">Hostess</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-reclutamiento');">Reclutamiento</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-kuniticket');">kuniticket</a>
@@ -321,6 +323,24 @@
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/homepagepro');">HomePagePro</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/pcAlly');">PC Ally</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/rainmeter_mirrorsEdge');">Rainmeter - Tema Mirror's Edge</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" onclick="$('body').loadHTML('contacto');">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-plug"></i></div>
+                            Contacto
+                        </a>
+
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#articulos"
+                            aria-expanded="false" aria-controls="articulos">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            Artículos
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="articulos" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" onclick="$('body').loadHTML('');">Próximamente</a>
+                                <a class="nav-link" onclick="$('body').loadHTML('');">Próximamente</a>
                             </nav>
                         </div>
                         <a class="nav-link" onclick="$('body').loadHTML('contacto');">
