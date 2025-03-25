@@ -94,7 +94,7 @@
             position: relative;
             width: 100%;
             height: 3px;
-            float: inline-start;
+            float: none;
             border-top: 2px solid red;
             margin: 1rem 0;
             background-color: red;
@@ -162,12 +162,9 @@
     <script>
         $(document).ready(function(){
             let page = getParameters('p');
-            console.log(page);
-            if(page==null || page==undefined){
-                // $('body').loadHTML('index_main');
-            }
             if(page == null || page ==undefined || page==""){
-                $("main").html("Elige una opción del menú de la izquierda");
+                // $("main").html("Elige una opción del menú de la izquierda");
+                $('body').loadHTML('index_main');
             }else{
                 $('body').loadHTML(page);
             }

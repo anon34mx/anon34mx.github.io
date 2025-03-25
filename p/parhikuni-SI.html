@@ -1,1 +1,26 @@
-Este proyecto surge de un problema generado en el área de sistemas del grupo empresarial en 2022 cuando dejaron sin servicio de venta, a todas las empresas del mismo grupo. Tuve que empezar a rehacer todo el sistema de venta. La primera ventaja de este sistema sería un mejor planteamiento desde la base de datos, comparado con el sistema SUC, aplicando en base de datos las funciones que sí o sí pertenecen a la base de datos, para poder ser manejados en diferentes versiones de el mismo sistema, pero tener la opción, en caso de que fuera necesario, aparte del sistema web, tal vez un sistema de escritorio, un sistema android, implementar APIs y evitar errores relativos a la duplicacion e inconsistencia del código, así como ahorrar tiempo de desarrollo entre diferentes lenguajes al tener ya la base. Dichas funciones como apartar un asiento o confirmar la venta. Un buen referente de esto es el archivo "[BD]/inserts/funciones crear corridas.sql". Este sistema lo analicé teniendo en cuenta la escalabilidad para ir implementando las funciones de los demás sistemas, lograr la homogenización, evitar duplicación de datos, el manejo de diferentes cuentas para el mismo empleado en los diferentes sistemas, módulos o submódulos ya existentes en DTI, en hostess, turismo, la venta, Etc. e ir sustituyéndolos. El backend está hecho con PHP+Laravel, HTML, CSS, Bootstrap y un punto importante es dejar de lado los navegadores web para incluir un sistema propio dónde visualizar este sistema implementando seguridad con validaciones al enviar formularios, validar un ID de hardware, que puede aplicarse o no a cada usuario, ya que presidencia y dirección pueden consultar cualquier información en cualquier lugar y se considera integrar funciones que acceden al sistema operativo o al hardware como múltiples impresoras o básculas para pesar equipaje y paquetería.
+<div class="col-12 row mx-0 px-2 blogCont">
+    <h1>SI</h1><sub>Sistema Integral</sub>
+    <section>
+        <p>
+            Este proyecto surge de un problema generado en el área de sistemas del grupo empresarial en 2022 cuando dejaron sin servicio de venta, a todas las empresas del mismo grupo. Tuve que empezar a rehacer todo el sistema de venta.
+        </p>
+        <p>
+            La primera ventaja de este sistema sería un mejor planteamiento desde la base de datos, comparado con el sistema SUC, aplicando en base de datos las funciones que sí o sí pertenecen a la base de datos, para poder ser manejados en diferentes versiones de el mismo sistema, pero tener la opción, en caso de que fuera necesario, aparte del sistema web, tal vez un sistema de escritorio, un sistema android, implementar APIs y evitar errores relativos a la duplicacion e inconsistencia del código, así como ahorrar tiempo de desarrollo entre diferentes lenguajes al tener ya la base. Dichas funciones como apartar un asiento o confirmar la venta.
+
+            <i>
+                Un buen referente de esto es el archivo "[BD]/inserts/funciones crear corridas.sql".
+            </i>
+        </p>
+        <p>
+            Este sistema lo analicé teniendo en cuenta la escalabilidad para ir implementando las funciones de los demás sistemas,
+            lograr la homogenización, evitar duplicación de datos, el manejo de diferentes cuentas para el mismo empleado en los
+            diferentes sistemas, módulos o submódulos ya existentes en DTI, en hostess, turismo, la venta, Etc. e ir sustituyéndolos.
+            <br>
+            El backend está hecho con PHP+Laravel, HTML, CSS, Bootstrap y un punto importante es dejar de lado los navegadores web
+            para incluir un sistema propio dónde visualizar este sistema implementando seguridad con validaciones al enviar
+            formularios, validar un ID de hardware, que puede aplicarse o no a cada usuario, ya que presidencia y dirección pueden
+            consultar cualquier información en cualquier lugar y se considera integrar funciones que acceden al sistema operativo o
+            al hardware como múltiples impresoras o básculas para pesar equipaje y paquetería.
+        </p>
+    </section>
+</div>
