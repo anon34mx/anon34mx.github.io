@@ -29,6 +29,10 @@
                         $("main").html(data);
 
                         window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
+
+                        $("main img").click(function () {
+                            imgPreview(this);
+                        });
                     },
                     error: function (e) {
                         console.log(e.message);
@@ -60,12 +64,16 @@
             $("#christian-modal div").empty();
             $("#christian-modal div").append(clon);
             $("#christian-modal").fadeIn();
-            // $("body").addClass("sb-sidenav-toggled");
+            if(window.innerWidth>991){
+                $("body").addClass("sb-sidenav-toggled");
+            }else{
+                $("body").removeClass("sb-sidenav-toggled");
+            }
         }
     </script>
     <style>
         *{
-            outline: 1px solid yellowgreen;
+            /* outline: 1px solid yellowgreen; */
         }
         html,body{
             
@@ -117,11 +125,11 @@
         #christian-modal{
             display: none;
             width: 100vw;
-            height: 100vh;
+            height: calc(100vh - 56px);
             background: black;
             position: fixed;
             z-index: 2;
-            top: 0;
+            top: 56px;
             left: 0;
         }
         
@@ -141,9 +149,12 @@
         #christian-modal i{
             position: absolute;
             color: white;
-            bottom: 0;
-            left: 50%;
+            top: 5px;
+            right: 0px;
             transform: translateX(-50%);
+            font-size: 2rem;
+            background: red;
+            padding: 0 20px;
         }
 
         .imgList{
@@ -169,11 +180,7 @@
                 $('body').loadHTML(page);
             }
 
-            // $("img").click(function(){
-            //     console.log("click");
-            //     imgPreview(this);
-            //     // $("#christian-modal").css("display","block");
-            // });
+
             $("#christian-modal").click(function(){
                 $(this).fadeOut();
             });
@@ -222,7 +229,7 @@
             <div>
                 <!-- <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt=""> -->
             </div>
-            <i>Click para cerrar modal</i>
+            <i>X</i>
         </div>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
@@ -290,7 +297,7 @@
                         </a>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProjects" aria-expanded="false"
                             aria-controls="collapseProjects">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-briefcase"></i></i></div>
                             Proyectos
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
@@ -322,15 +329,9 @@
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/rainmeter_mirrorsEdge');">Rainmeter - Tema Mirror's Edge</a>
                             </nav>
                         </div>
-                        <a class="nav-link" onclick="$('body').loadHTML('contacto');">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-plug"></i></div>
-                            Contacto
-                        </a>
-
-                        
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#articulos"
                             aria-expanded="false" aria-controls="articulos">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-glasses"></i></i></div>
                             Artículos
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
