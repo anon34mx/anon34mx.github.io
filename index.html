@@ -14,7 +14,14 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-        jQuery.fn.loadHTML = function (url) {
+        // window.onbeforeunload = function () { return "Your work will be lost."; };
+        // window.history.back
+        // window.HashChangeEvent=()=>{
+        //     console.log("cambio");
+        // }
+
+
+        jQuery.fn.loadHTML = function (url, replacehistory=true) {
                 var thisElement = this;
                 console.log("cargando: "+url);
                 $.ajax({
@@ -28,8 +35,10 @@
                         $("main").empty();
                         $("main").html(data);
 
-                        window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
-
+                        if(replacehistory){
+                            window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
+                        }
+                        
                         $("main img").click(function () {
                             imgPreview(this);
                         });
@@ -171,14 +180,20 @@
         }
     </style>
     <script>
-        $(document).ready(function(){
+        window.addEventListener("popstate", (event) => {
+            // alert("hello"); 
+            autoload(false);
+        });
+        function autoload(replacehistory=true){
             let page = getParameters('p');
-            if(page == null || page ==undefined || page==""){
-                // $("main").html("Elige una opción del menú de la izquierda");
-                $('body').loadHTML('index_main');
-            }else{
-                $('body').loadHTML(page);
+            if (page == null || page == undefined || page == "") {
+                $('body').loadHTML('index_main', replacehistory);
+            } else {
+                $('body').loadHTML(page, replacehistory);
             }
+        }
+        $(document).ready(function(){
+            autoload();
 
 
             $("#christian-modal").click(function(){
@@ -220,6 +235,20 @@
 "months -> " + months + "\n"+
            "" );
            */
+        }
+        window.onhashchange = function () {
+            console.log("cmabiado");
+            let page = getParameters('p');
+            $('body').loadHTML(page);
+        }
+
+        // Detect page re-enter after back button press
+        window.onpageshow = event => {
+            if (event.persisted) {
+                console.log("Page reopened from bfcache");
+            } else {
+                console.log("Page loaded normally");
+            }
         }
     </script>
 </head>
