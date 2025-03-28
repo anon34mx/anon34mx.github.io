@@ -14,52 +14,55 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-        // window.onbeforeunload = function () { return "Your work will be lost."; };
-        // window.history.back
-        // window.HashChangeEvent=()=>{
-        //     console.log("cambio");
-        // }
-
-
         jQuery.fn.loadHTML = function (url, replacehistory=true) {
-                var thisElement = this;
-                console.log("cargando: "+url);
-                $.ajax({
-                    type: 'GET',
-                    url: url + ".html",
-                    dataType: 'text',
-                    beforeSend: function () {
-                        //$("#loader_img").css("display", "block");
-                    },
-                    success: function (data) {
-                        $("main").empty();
-                        $("main").html(data);
+            let page = getParameters('p');
 
-                        if(replacehistory){
-                            window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
-                        }
-                        
-                        $("main img").click(function () {
-                            imgPreview(this);
-                        });
-                    },
-                    error: function (e) {
-                        console.log(e.message);
-                        $.ajax({
-                            type: 'GET',
-                            url: "404.html",
-                            success: function (data) {
-                                $("main").empty();
-                                $("main").html(data);
-                            },
-                            error: function (e) {
-                                console.log(e.message);
+            var thisElement = this;
+            console.log("cargando: "+url);
+            var fadeTime=200;
+            $.ajax({
+                type: 'GET',
+                url: url + ".html",
+                dataType: 'text',
+                beforeSend: function () {
+                    //$("#loader_img").css("display", "block");
+                },
+                success: function (data) {
+                    $("main").fadeOut(fadeTime);
+                    setTimeout(() => {
+                        $("main").empty();
+                        $("main").html(data).fadeIn(fadeTime);
+
+                        setTimeout(() => {
+                            if(replacehistory){
+                                window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
                             }
-                        });
-                    }
-                });
-                ocultarSidebarResponsivo();
-            }
+                            $("main img").click(function () {
+                                imgPreview(this);
+                            });
+                        }, fadeTime);
+
+                    }, fadeTime);
+
+
+                },
+                error: function (e) {
+                    console.log(e.message);
+                    $.ajax({
+                        type: 'GET',
+                        url: "404.html",
+                        success: function (data) {
+                            $("main").empty();
+                            $("main").html(data);
+                        },
+                        error: function (e) {
+                            console.log(e.message);
+                        }
+                    });
+                }
+            });
+            ocultarSidebarResponsivo();
+        }
 
         function ocultarSidebarResponsivo(){
             if (window.innerWidth < 992 && $("body").hasClass("sb-sidenav-toggled")) {
