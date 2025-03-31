@@ -1,9 +1,23 @@
-// // my-component.js
-// import { ref } from './composition-api@1.7.2'
 // export default {
-//     setup() {
-//         const count = ref(0)
-//         return { count }
+//     name: 'CounterComponent',
+//     data() {
+//         return {
+//             count: 0
+//         };
 //     },
-//     template: `<div>Count is: {{ count }}</div>`
-// }
+//     template: `
+//         <div>
+//             <p>Current Count: {{ count }}</p>
+//             <button @click="increment">Increment</button>
+//             <button @click="decrement">Decrement</button>
+//         </div>
+//     `,
+//     methods: {
+//         increment() {
+//             this.count++;
+//         },
+//         decrement() {
+//             this.count--;
+//         }
+//     }
+// };
