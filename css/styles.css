@@ -10843,7 +10843,7 @@ textarea.form-control-lg {
 }
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
 }
 
 #layoutAuthentication {
@@ -10869,6 +10869,10 @@ body {
   z-index: 1038;
   transform: translateX(-225px);
 }
+.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content{
+  /* filter: blur(2px); */
+}
+/* .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before */
 #layoutSidenav #layoutSidenav_content {
   position: relative;
   display: flex;
@@ -10997,6 +11001,7 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: relative;
+  cursor: pointer;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
   font-size: 0.9rem;

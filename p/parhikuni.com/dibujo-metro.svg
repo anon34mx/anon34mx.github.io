@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="226mm"
+   height="150mm"
+   viewBox="0 0 226 150"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="dibujo-metro.svg"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   inkscape:zoom="0.94720833"
+   inkscape:cx="427.57225"
+   inkscape:cy="283.46457"
+   inkscape:window-width="1366"
+   inkscape:window-height="715"
+   inkscape:window-x="-8"
+   inkscape:window-y="174"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="layer2"
+   showguides="false" /><defs
+   id="defs1"><linearGradient
+     id="linearGradient5"
+     inkscape:collect="always"><stop
+       style="stop-color:#6c00ff;stop-opacity:1;"
+       offset="0"
+       id="stop5" /><stop
+       style="stop-color:#6c00ff;stop-opacity:0;"
+       offset="1"
+       id="stop6" /></linearGradient><inkscape:path-effect
+     effect="bspline"
+     id="path-effect16"
+     is_visible="true"
+     lpeversion="1.3"
+     weight="33.333333"
+     steps="2"
+     helper_size="0"
+     apply_no_weight="true"
+     apply_with_weight="true"
+     only_selected="false"
+     uniform="false" /><inkscape:path-effect
+     effect="bspline"
+     id="path-effect15"
+     is_visible="true"
+     lpeversion="1.3"
+     weight="33.333333"
+     steps="2"
+     helper_size="0"
+     apply_no_weight="true"
+     apply_with_weight="true"
+     only_selected="false"
+     uniform="false" /><inkscape:path-effect
+     effect="bspline"
+     id="path-effect14"
+     is_visible="true"
+     lpeversion="1.3"
+     weight="33.333333"
+     steps="2"
+     helper_size="0"
+     apply_no_weight="true"
+     apply_with_weight="true"
+     only_selected="false"
+     uniform="false" /><inkscape:path-effect
+     effect="spiro"
+     id="path-effect8"
+     is_visible="true"
+     lpeversion="1" /><inkscape:path-effect
+     effect="bspline"
+     id="path-effect7"
+     is_visible="true"
+     lpeversion="1.3"
+     weight="33.333333"
+     steps="2"
+     helper_size="0"
+     apply_no_weight="true"
+     apply_with_weight="true"
+     only_selected="false"
+     uniform="false" /><inkscape:path-effect
+     effect="bspline"
+     id="path-effect6"
+     is_visible="true"
+     lpeversion="1.3"
+     weight="33.333333"
+     steps="2"
+     helper_size="0"
+     apply_no_weight="true"
+     apply_with_weight="true"
+     only_selected="false"
+     uniform="false" /><inkscape:path-effect
+     effect="spiro"
+     id="path-effect5"
+     is_visible="true"
+     lpeversion="1" /><linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient5"
+     id="linearGradient6"
+     x1="199.13271"
+     y1="54.155643"
+     x2="227.01866"
+     y2="54.155643"
+     gradientUnits="userSpaceOnUse" /></defs><g
+   inkscape:label="Capa 1"
+   inkscape:groupmode="layer"
+   id="layer1"><image
+     width="256.11666"
+     height="210.25793"
+     preserveAspectRatio="none"
+     xlink:href="..%5C.%5C..%5C..%5Cmapas%5Cmapa.jpg"
+     id="image1"
+     x="377.26764"
+     y="85.629234"
+     style="stroke:#000000;stroke-opacity:1" /></g><g
+   inkscape:groupmode="layer"
+   id="layer2"
+   inkscape:label="Capa 2">
+   
+   <path
+   style="fill:none;fill-opacity:1;stroke:#fed800;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+   inkscape:path-effect="#path-effect16"
+   inkscape:original-d="m -109.28801,25.923008 c 0.0203,7.834333 0.0609,23.503 0.0609,23.503 0,0 34.734987,0 52.10248,0"
+   transform="translate(187.65863,-4.6720082)"
+   d="m -109.28801,25.923008 c 0.0203,7.834333 0.0406,15.668667 0.0609,23.503 17.367493,0 34.734987,0 52.10248,0"
+   id="pMoreCcam"
+   sodipodi:nodetypes="ccc" />
+   
+   <path
+   style="fill:none;fill-opacity:0.933754;stroke:#00a7e7;stroke-width:2;stroke-opacity:1"
+   d="M 130.447,48.103769 V 105.389"
+   id="pCcamLcar"
+   sodipodi:nodetypes="cc" />
+   
+   <path
+   style="fill:none;fill-opacity:1;stroke:#6c00ff;stroke-width:2;stroke-opacity:1"
+   d="m 132.504,47.05 v 32.061833 h 55.959 V 105.996"
+   id="pzihu"
+   sodipodi:nodetypes="cccc" />
+   
+   <path
+   style="fill:none;stroke:#009e00;stroke-width:2;stroke-opacity:1"
+   d="M 128.461,47.005 V 79.111833 H 85.523126 24.278 V 105.179 h 54.03"
+   id="pCcamCoal"
+   sodipodi:nodetypes="cccccc" />
+
+
+<path
+   style="fill:none;stroke:#aa0000;stroke-width:2;stroke-opacity:1"
+   d="m 77.888956,21.598441 51.096734,-0.159297 48.75838,-0.05263"
+   id="pMoreTaca"
+   sodipodi:nodetypes="ccc" />
+<path
+   style="fill:none;fill-opacity:0.933754;stroke:#ea00f2;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+   d="m 133.69401,44.754 h 46.83546"
+   id="pCcamArte"
+   sodipodi:nodetypes="cc"
+   inkscape:label="pCcamArte" />
+  <path
+   style="fill:none;fill-opacity:0.933754;stroke:#00a7e7;stroke-width:2;stroke-opacity:1"
+   d="M 130.447,48.103769 V 105.389"
+   id="path1"
+   sodipodi:nodetypes="cc" /><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#6c00ff;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu"
+   cx="188.45366"
+   cy="105.74065"
+   inkscape:label="plZihu"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#6c00ff;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#6c00ff;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#6c00ff;stroke-width:1.09731;stroke-opacity:1"
+   id="plIxta"
+   cx="188.45375"
+   cy="79.085655"
+   inkscape:label="plIxta"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#6c00ff;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-2"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#6c00ff;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#00a7ff;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6"
+   cx="130.52565"
+   cy="105.74065"
+   inkscape:label="plLcar"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#00a7ff;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#00a7ff;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#ea00f2;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6"
+   cx="180.72966"
+   cy="45.004654"
+   inkscape:label="plArte"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#ea00f2;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#ea00f2;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1"
+   cx="78.318657"
+   cy="105.74046"
+   inkscape:label="plCoal"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#009e00;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-width:1.09731;stroke-opacity:1"
+   id="plTepa"
+   cx="24.348656"
+   cy="105.14066"
+   inkscape:label="plTepa"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#009e00;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)">
+   <tspan
+   sodipodi:role="line"
+   id="tspan1-4-8-9-1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-width:1.09731;stroke-opacity:1"
+   id="plBuen"
+   cx="24.348656"
+   cy="79.085655"
+   inkscape:label="plBuen"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#009e00;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1-1-5-7"
+   cx="78.318657"
+   cy="79.086113"
+   inkscape:label="plApat"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#009e00;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1-2"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#009e00;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#aa0000;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1-1-5-7-0"
+   cx="180.72919"
+   cy="21.258505"
+   inkscape:label="plTaca"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#aa0000;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1-2-8"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7-5-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#aa0000;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#aa0000;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1-1-5-7-0-7"
+   cx="130.51067"
+   cy="21.258656"
+   inkscape:label="plVILL"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#aa0000;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1-2-8-3"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7-5-3-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#aa0000;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1-1-5-7-8"
+   cx="130.51065"
+   cy="45.004654"
+   inkscape:label="plCcam"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#000000;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1-2-5"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7-5-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-6-6-1-1-5-7-1"
+   cx="78.318268"
+   cy="21.258656"
+   inkscape:label="plMore"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#000000;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-3-4-7-5-1-2-7"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-4-8-9-1-7-5-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle><circle
+   style="fill:#ffffff;fill-opacity:1;stroke:#fed800;stroke-width:1.09731;stroke-opacity:1"
+   id="plZihu-5"
+   cx="78.318657"
+   cy="45.004314"
+   inkscape:label="plUrua"
+   r="3">
+
+  <text
+   xml:space="preserve"
+   style="font-size:7.76111px;fill:#ffffff;stroke:#fed800;stroke-width:0.601629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+   x="160.03218"
+   y="48.881294"
+   id="text1-5"
+   inkscape:highlight-color="#e3d1e1"
+   transform="scale(1.0099812,0.99011744)"><tspan
+     sodipodi:role="line"
+     id="tspan1-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.601629;fill:#ffffff;fill-opacity:1;stroke:#fed800;stroke-opacity:1"
+     x="160.03218"
+     y="48.881294">MORELIA</tspan></text></circle>
+     
+     <ellipse
+   style="fill:#ffffff;fill-opacity:1"
+   id="cMoreTaca"
+   cx="2.8415203"
+   cy="-0.10847888"
+   rx="2.4915204"
+   ry="2.4915211"
+   inkscape:label="cMoreTaca">
+	   <animateMotion
+   id="cMoreTaca-anim"
+   begin="0s;cCcamCoal-anim.end+0s"
+   dur="2s"
+   repeatCount="1"
+   fill="freeze"><mpath
+     href="#pMoreTaca" /></animateMotion>
+     <animate
+   begin="cMoreTaca-anim.begin+0s"
+   attributeName="fill"
+   to="#aa0000ff"
+   dur="0.1s"
+   fill="freeze" />
+     <animate
+   begin="cMoreTaca-anim.begin+3s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze" />
+  </ellipse>
+  <ellipse
+   style="fill:#aa0000;fill-opacity:1"
+   id="cMoreCcam"
+   cx="187.67152"
+   cy="-4.4154787"
+   rx="2.4915204"
+   ry="2.4915211"
+   inkscape:label="cMoreCcam">
+    <animateMotion
+   id="cMoreCcam-anim"
+   begin="0s;cCcamCoal-anim.end+0s"
+   dur="2s"
+   fill="freeze"
+   repeatCount="1"><mpath
+     href="#pMoreCcam" /></animateMotion>
+        <animate
+   begin="cMoreTaca-anim.begin+0s"
+   attributeName="fill"
+   to="#fed800ff"
+   dur="0.1s"
+   fill="freeze" />
+     <animate
+   begin="cMoreTaca-anim.begin+3s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze" />
+  </ellipse>
+  <ellipse
+   style="fill:#009e0000;fill-opacity:0.99802369"
+   id="cCcamCoal"
+   cx="-0.042479597"
+   cy="0.59152114"
+   rx="2.6"
+   ry="2.6"
+   inkscape:label="cCcamCoal">
+    <animateMotion
+   id="cCcamCoal-anim"
+   begin="cMoreCcam-anim.end+0s"
+   dur="5s"
+   fill="freeze"
+   repeatCount="1">
+  <mpath
+   href="#pCcamCoal" />
+   </animateMotion>
+        <animate
+   begin="cCcamCoal-anim.begin+0s"
+   attributeName="fill"
+   to="#009e00ff"
+   dur="0.1s"
+   fill="freeze" />
+     <animate
+   begin="cCcamCoal-anim.begin+5s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze"
+   restart="always" />
+
+    </ellipse>
+  <ellipse
+   style="fill:#ffffff;fill-opacity:1"
+   id="cCcamLcar"
+   cx="-0.042479597"
+   cy="0.37752113"
+   rx="2.4915204"
+   ry="2.4915211"
+   inkscape:label="cCcamLcar">
+    <animateMotion
+   id="cCcamLcar-anim"
+   begin="cMoreCcam-anim.end+0s"
+   dur="2s"
+   fill="freeze"
+   repeatCount="1">
+  <mpath
+   href="#pCcamLcar" />
+   </animateMotion>
+              <animate
+   begin="cCcamLcar-anim.begin+0s"
+   attributeName="fill"
+   to="#00a7e7ff"
+   dur="0.01s"
+   fill="freeze" />
+     <animate
+   begin="cCcamLcar-anim.begin+2s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze" />
+    </ellipse>
+  <ellipse
+   style="fill:#6c00ff00;fill-opacity:1;stroke:#6c00ff;stroke-opacity:0"
+   id="cCcamZihu"
+   cx="-0.042479597"
+   cy="-0.32288235"
+   rx="2.4915204"
+   ry="2.4915211"
+   inkscape:label="cCcamZihu">
+    <animateMotion
+   id="cCcamZihu-anim"
+   begin="cMoreCcam-anim.end+0s"
+   dur="3s"
+   fill="freeze"
+   repeatCount="1">
+  <mpath
+   href="#pzihu" />
+   </animateMotion>
+    <animate
+   begin="cCcamZihu-anim.begin+0s"
+   attributeName="fill"
+   to="#6c00ffff"
+   dur="0.01s"
+   fill="freeze" />
+     <animate
+   begin="cCcamZihu-anim.begin+3s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze" />
+    </ellipse>
+  <ellipse
+   style="fill:#ea00f2;fill-opacity:0"
+   id="cCcamArte"
+   cx="0.14152041"
+   cy="0.34152111"
+   rx="2.4915204"
+   ry="2.4915211"
+   inkscape:label="cCcamArte">
+    <animateMotion
+   id="cCcamArte-anim"
+   begin="cMoreCcam-anim.end+0s"
+   dur="1s"
+   fill="freeze"
+   repeatCount="1">
+  <mpath
+   href="#pCcamArte" />
+   </animateMotion>
+    <animate
+   begin="cCcamArte-anim.begin+0s"
+   attributeName="fill"
+   to="#ea00f2"
+   dur="0.01s"
+   fill="freeze" />
+     <animate
+   begin="cCcamArte-anim.begin+3s"
+   attributeName="fill"
+   to="#00000000"
+   dur="2s"
+   fill="freeze" />
+    </ellipse>
+     
+  
+<text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="67.096863"
+   y="16.109306"
+   id="text2"
+   inkscape:label="lbl-more"><tspan
+     sodipodi:role="line"
+     id="tspan2"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="67.096863"
+     y="16.109306">MORELIA</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="66.121399"
+   y="53.535358"
+   id="text2-6"
+   inkscape:label="lbl-urua"><tspan
+     sodipodi:role="line"
+     id="tspan2-6"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="66.121399"
+     y="53.535358">URUAPAN</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="133.7849"
+   y="51.595646"
+   id="text2-6-2"
+   inkscape:label="lbl-ccam"><tspan
+     sodipodi:role="line"
+     id="tspan2-6-9"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="133.7849"
+     y="51.595646"
+     dy="2"
+     dx="0"
+     rotate="0 0 0 0 0 0 0">CUATRO</tspan><tspan
+     sodipodi:role="line"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="133.7849"
+     y="57.769257"
+     id="tspan3"
+     rotate="0 0 0 0 0 0 0 0">CAMINOS</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="164.93651"
+   y="16.458988"
+   id="text2-4"
+   inkscape:label="lbl-taca"><tspan
+     sodipodi:role="line"
+     id="tspan2-3"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="164.93651"
+     y="16.458988">TACÁMBARO</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="64.742409"
+   y="73.59565"
+   id="text2-4-4"
+   inkscape:label="lbl-apat"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="64.742409"
+     y="73.59565">APATZINGAN</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+   x="168.10373"
+   y="53.595646"
+   id="text2-4-4-5"
+   inkscape:label="lbl-arte"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-0"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-opacity:1"
+     x="168.10373"
+     y="53.595646">ARTEAGA</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="179.75031"
+   y="73.535355"
+   id="text2-4-4-5-9"
+   inkscape:label="lbl-ixta"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-0-2"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="179.75031"
+     y="73.535355">IXTAPA</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="171.6136"
+   y="113.59565"
+   id="text2-4-4-5-9-3"
+   inkscape:label="lbl-zihu"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-0-2-2"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="171.6136"
+     y="113.59565">ZIHUATANEJO</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="130.46359"
+   y="112.45898"
+   id="text2-4-4-5-2"
+   inkscape:label="lbl-lcar"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-0-6"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="130.46359"
+     y="112.45898"
+     dy="2">LÁZARO</tspan><tspan
+     sodipodi:role="line"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="130.46359"
+     y="118.6326"
+     id="tspan4">CÁRDENAS</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="5.4583449"
+   y="73.59565"
+   id="text2-4-4-6"
+   inkscape:label="lbl-buen"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-7"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="5.4583449"
+     y="73.59565">BUENAVISTA</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="5.0775576"
+   y="113.59565"
+   id="text2-4-4-6-9"
+   inkscape:label="lbl-tepa"><tspan
+     sodipodi:role="line"
+     id="tspan2-3-5-7-1"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="5.0775576"
+     y="113.59565">TEPALCATEPEC</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="61.841396"
+   y="113.59565"
+   id="text5"
+   inkscape:label="lbl-arte"><tspan
+     sodipodi:role="line"
+     id="tspan5"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="61.841396"
+     y="113.59565">COALCOMAN</tspan></text><text
+   xml:space="preserve"
+   style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   x="109.07888"
+   y="16.109306"
+   id="text2-48"
+   inkscape:label="lbl-more"><tspan
+     sodipodi:role="line"
+     id="tspan2-1"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2"
+     x="109.07888"
+     y="16.109306">VILLAMADERO</tspan></text></g>
+</svg>
