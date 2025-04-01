@@ -20,10 +20,6 @@
         </figure>
         <p>
             La primera ventaja de este sistema sería un mejor planteamiento desde la base de datos, comparado con el sistema SUC, aplicando en base de datos las funciones que sí o sí pertenecen a la base de datos, para poder ser manejados en diferentes versiones de el mismo sistema, pero tener la opción, en caso de que fuera necesario, aparte del sistema web, tal vez un sistema de escritorio, un sistema android, implementar APIs y evitar errores relativos a la duplicacion e inconsistencia del código, así como ahorrar tiempo de desarrollo entre diferentes lenguajes al tener ya la base. Dichas funciones como apartar un asiento o confirmar la venta.
-
-            <!-- <i>
-                Un buen referente de esto es el archivo "[BD]/inserts/funciones crear corridas.sql".
-            </i> -->
         </p>
         <p>
             Este sistema lo analicé teniendo en cuenta la escalabilidad para ir implementando las funciones de los demás sistemas,
@@ -44,6 +40,132 @@
             <img src="./p/parhikuni-SI/BD_SI.PNG" alt="" width="100%">
             <figcaption>Diagrama ER (censurado por motivos obvios)</figcaption>
         </figure>
+    </section>
+    <section>
+        <p>
+            <!-- A continuación comparto y explico un poco del sistema, esta es una de 4 funciones que manejan una parte muy importante y muy amplia de la venta, que consiste en los siquientes puntos -->
+            La siguiente consulta es parte de alguno muy complejo, para entenderla hay que tener en cuenta que el sistema se compone de las siguientes partes:
+        </p>
+        <ul>
+            <li>
+                <b>Plan de generación periódica de corridas:</b> este indica qué días de la semana estará disponible la corrida, a qué hora, origen, destino, clase de servicio y su itinerario.
+                <br>
+                &nbsp;&nbsp;&nbsp;<i>Ejemplo: los lunes de junio a agosto sale una corrida de Morelia a Ixtapa a las 07:00am en servicio Platinum</i>
+            </li>
+            <li>
+                <b>Corridas disponibles para la venta:</b> Como lo dice su nombre es la corrida que se ofrece al cliente ya con fecha y hora concreta, se le asigna un conductor, un autobús y una disponibilidad de asientos.
+                <br>
+                &nbsp;&nbsp;&nbsp;<i>Ejemplo: el lunes 7 de julio de 2025 a las 07:00am sale una corrida de Morelia a Ixtapa en servicio Platinum, conduce Juan Lopez la Unidad 8008</i>
+            </li>
+            <li>
+                <b>La corrida tiene un itinerario:</b> este indica el recorrido completo de la corrida, enlistando los tramos.
+            </li>
+            <li>
+                <b>El itinerario se compone de <i>tramos</i> con origen y destino</b>, aquí se espeficica las distancias entre los distintos puntos, el tiempo estimado de llegada, un tiempo de estancia al llegar a cada punto.
+            </li>
+            <li>
+                <b>La disponibilidad de asientos,</b> si el itinerario tiene 3 tramos <i>(Morelia->Uruapan->Cuatro Caminos->Apatzingán)</i> y una persona viaja de Morelia a Uruapan el asiento debe volver a estar libre para la venta de Uruapan al resto de tramos. 
+                <br>- Registra la corrida y fecha y hora concreta de llegada y salida a cada tramos. Retomando el Ejemplo <i>El día 07/jun/2025 sale de Morelia a Uruapan a las 07:00am y debe llegar a las 08:30am</i> Así calculamos con exactitud.
+                <br>- Si ya se vendió se guarda el folio del boleto para cualquier aclaración.
+                <br>- Se guarda el dato con fecha y hora ya que si un asiento se encuentra apartado por 15 minutos sin completar una compra debe volver a liberarse, esto se hace por medio de un procedimiento almacenado que se ejecuta por medio de un evento programado.
+                <br>- Esta tabla de disponibilidad se relaciona con <i>disponibilidadasientos</i> para registrar el estado en que se encuentra cada asiento (disponible, apartado, bloqueado, vendido), si no se encuentra se considera disponible para la venta.
+            </li>
+        </ul>
+        <p>
+            Con estas funciones pude mejorar los tiempos de ejecución de 20, 30, 40 minutos y más, que mientras más registros tuviera el sistema más tardaba a un par de segundos. Es más eficiente trabajar estas funciones directo con SQL que en PHP (o cualquier otro lenguaje, sí hasta python)
+        </p>
+<pre>
+<code id="crear_disponibilidad" class="language-sql">
+-- [CREAR DISPONIBILIDAD]
+CREATE OR REPLACE FUNCTION crear_disponibilidad(IN_corrida_dis INT)
+RETURNS SMALLINT
+BEGIN
+    DECLARE curDisp_nOrigen INT UNSIGNED;
+    DECLARE curDisp_nDestino INT UNSIGNED;
+    DECLARE curDisp_hLlega DATETIME;
+    DECLARE curDisp_hSale DATETIME;
+    DECLARE curDisp_inserted BOOLEAN;
+    
+    DECLARE done INT DEFAULT FALSE; -- continuar o terminar ciclo
+    DECLARE cursor_Disp CURSOR FOR SELECT
+        TIMESTAMP(cordis.fSalida, cordis.hSalida) + INTERVAL (
+            SELECT
+            IF(SUM(tr.nTiempo)+tr.nEstancia IS NULL, 0, SUM(tr.nTiempo)+tr.nEstancia)
+            FROM `itinerario` itiSub
+            INNER JOIN tramos tr on tr.nNumero=itiSub.nTramo
+            WHERE itiSub.nItinerario=iti.nItinerario
+            and itiSub.nConsecutivo<(
+                SELECT itiSub2.nConsecutivo FROM `itinerario` itiSub2
+                INNER JOIN tramos trSub on trSub.nNumero=itiSub2.nTramo
+                WHERE itiSub2.nItinerario=iti.nItinerario and trSub.nOrigen=tra.nOrigen
+            )
+        ) MINUTE as hSalidaCorrida,
+        TIMESTAMP(cordis.fSalida, cordis.hSalida) + INTERVAL (
+            (
+                SELECT
+                IF( SUM(trSub.nTiempo) is NULL, 0, SUM(trSub.nTiempo))
+                as tiempoTrans
+                FROM `itinerario` itiSub
+                INNER JOIN tramos trSub on itiSub.nTramo=trSub.nNumero
+                WHERE itiSub.`nItinerario`=cordis.nItinerario and itiSub.nConsecutivo<=cadaTramo.nConsecutivo
+                ORDER BY itiSub.nConsecutivo ASC -- si sale mal, quitar esto (no deberia :c )
+            )
+            +
+            (
+                SELECT
+                IF( SUM(tr.nEstancia) IS NULL, 0, SUM(tr.nEstancia))
+                FROM  itinerario as itiSub
+                INNER JOIN tramos tr on tr.nNumero=itiSub.nTramo
+                WHERE itiSub.nItinerario=cordis.nItinerario -- parametro -- lo cambié, estaba en 3
+                AND itiSub.nConsecutivo<(
+                    SELECT itiSub2.nConsecutivo FROM itinerario as itiSub2
+                    INNER JOIN tramos trSub on trSub.nNumero=itiSub2.nTramo
+                    WHERE trSub.nDestino=cadaTramo.nDestino AND  itiSub2.nItinerario=iti.nItinerario -- parametros
+                    ORDER BY itiSub2.nConsecutivo ASC -- si sale mal, quitar esto (no deberia :c )
+                )
+            )
+        ) MINUTE as hLlegadaCalc,
+        tra.nOrigen, cadaTramo.nDestino
+        FROM corridasdisponibles cordis
+        JOIN itinerario iti on iti.nItinerario=cordis.nItinerario
+        join tramos tra on tra.nNumero=iti.nTramo
+        JOIN (
+            SELECT itiSub.nItinerario, itiSub.nConsecutivo, tramSub.nOrigen, tramSub.nDestino  from itinerario as itiSub
+                INNER JOIN tramos as tramSub on tramSub.nNumero=itiSub.nTramo -- and itiSub.nConsecutivo>iti.nConsecutivo
+        ) as cadaTramo on cadaTramo.nItinerario=iti.nItinerario and cadaTramo.nConsecutivo>=iti.nConsecutivo
+        INNER JOIN oficinas as ofiOri on ofiOri.nNumero=tra.nOrigen AND ofiOri.lDestino=1
+        INNER JOIN oficinas as ofiDes on ofiDes.nNumero=cadaTramo.nDestino AND ofiDes.lDestino=1
+        LEFT JOIN disponibilidad as dis on dis.nCorridaDisponible=cordis.nNumero
+            and dis.nOrigen=tra.nOrigen and dis.nDestino=cadaTramo.nDestino
+        where cordis.nNumero=IN_corrida_dis and dis.nNumero IS NULL AND tra.nOrigen!=cadaTramo.nDestino
+        order by iti.nConsecutivo;
+    
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
+    SET curDisp_inserted=0;
+
+    OPEN cursor_Disp;
+        read_loop: LOOP
+            FETCH cursor_Disp INTO curDisp_hSale, curDisp_hLlega, curDisp_nOrigen, curDisp_nDestino; -- curDisp_nTramo, 
+            IF done THEN
+                LEAVE read_loop;
+            END IF;
+
+            INSERT INTO disponibilidad
+                (`nCorridaDisponible`, `nOrigen`, `nDestino`, `fLlegada`, `hLlegada`, `fSalida`, `hSalida`)
+                VALUES (IN_corrida_dis, curDisp_nOrigen, curDisp_nDestino, DATE(curDisp_hLlega), TIME(curDisp_hLlega), DATE(curDisp_hSale), TIME(curDisp_hSale));
+        SET curDisp_inserted=curDisp_inserted+1;
+        END LOOP;
+    CLOSE cursor_Disp;
+    RETURN curDisp_inserted;
+END; //
+</code>
+</pre>
     </section>
 </div>
+
+<script>
+    $(document).ready(()=>{
+        hljs.highlightAll();
+    });
+</script>

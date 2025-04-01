@@ -10870,7 +10870,7 @@ body {
   transform: translateX(-225px);
 }
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content{
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 /* .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before */
 #layoutSidenav #layoutSidenav_content {
