@@ -1,15 +1,55 @@
-<div class="container-fluid px-4 pt-3">
-    <p>
-        <a href="https://www.deviantart.com/anon34a/art/Mirror-s-edge-inpired-by-Rainmeter-Suite-v2-483319261">
-            <figure class="mx-3 my-2 "style="
-                float: left;
-            ">
-                <img src="./pp/rainmeter_mirrorsEdge.jpg" width="400">
-                <figcaption>Ver en deviantArt</figcaption>
-            </figure>
-        </a>
-        <blockquote cite="https://es.wikipedia.org/wiki/Rainmeter">
-            Rainmeter es una herramienta de personalización de escritorio libre y de código abierto para Windows, publicada bajo la licencia GPLv2. Permite a los usuarios crear y visualizar widgets de escritorio personalizables o applets personalizables generados por el usuario llamados "pieles" (skins) que muestran información. Las colecciones de pieles listas para usar se pueden descargar e instalar en paquetes conocidos como "suites".
-        </blockquote>
-    </p>
+<div class="col-12 row mx-0 px-2 blogCont">
+    <section>
+        <p>
+            <a href="https://www.deviantart.com/anon34a/art/Mirror-s-edge-inpired-by-Rainmeter-Suite-v2-483319261">
+                <figure class="mx-3 my-2 "style="
+                    float: left;
+                ">
+                    <img src="./pp/rainmeter_mirrorsEdge.jpg" width="400">
+                    <figcaption>Ver en deviantArt</figcaption>
+                </figure>
+            </a>
+            <blockquote cite="https://es.wikipedia.org/wiki/Rainmeter">
+                Rainmeter es una herramienta de personalización de escritorio libre y de código abierto para Windows, publicada bajo la licencia GPLv2. Permite a los usuarios crear y visualizar widgets de escritorio personalizables o applets personalizables generados por el usuario llamados "pieles" (skins) que muestran información. Las colecciones de pieles listas para usar se pueden descargar e instalar en paquetes conocidos como "suites".
+            </blockquote>
+        </p>
+
+    </section>
+    <section>
+<pre><code class="language-ini">Rainmeter se basó en los archivos.ini conformados por [secciones] claves=valores
+[Rainmeter]
+Update=-1
+
+[Variables]
+languaje=EN
+;variable
+btn_color=56B8A3
+
+[btn_close_session]
+;Así se crea un botón
+Meter=Button
+;uso de una variable
+ImageTint=#btn_color#
+; evento click = reproducir sonido
+LeftMouseDownAction=[PLAY "#@#\audio\in.wav"][!ActivateConfig "#CURRENTCONFIG#" "close session.ini"]
+ButtonImage=#@#img\btn_inverse.png
+
+;posición X & Y
+x=((#WorkAreaWidth#-349)-#distanceR#)
+y=80
+
+[text_close_session]
+Meter=String
+MeterStyle=estilo_texto_btns_launcher
+Text=#close_session#
+x=310r
+</code></pre>
+
+    </section>
 </div>
+
+<script>
+    $(document).ready(() => {
+        hljs.highlightAll();
+    });
+</script>

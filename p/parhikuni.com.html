@@ -1,7 +1,7 @@
 <div class="col-12 row mx-0 px-2 blogCont">
     <h1 class="titulo">Parhíkuni.com</h1>
     <section>
-        <figure class="col-12 col-sm-4 mx-2 my-2" style="float:right;">
+        <figure class="col-12 col-sm-4 mx-2 my-2 float-end">
             <img src="./p/parhikuni.com/parhikuni.com.png" alt="Vista previa de Parhikuni.com" width="100%">
             <a href="https://parhikuni.com/">
                 <figcaption>Ir a Parhikuni.com</figcaption>
@@ -24,6 +24,23 @@
             la sección de ayuda es donde se recopilan las preguntas frecuentes sobre el servicio y en la sección de nosotros
             se
             habla sobre la historia de la empresa.
+        </p>
+    </section>
+    
+    <section>
+        <b>Usabilidad, responsividad, adaptabilidad</b>
+        <p>
+            Este sitio web fue planeado para ser utilizado en dispositivos móviles, tabletas y computadoras de escritorio independientemente del tamaño de la pantalla, cumpliendo los estándares de diseño responsivo y adaptativo. Al cambiar el tamaño de la ventana del navegador web algunos elementos cambian su tamaño y orden, el texto siempre es legible al recibir un tamaño proporcional. Esto se logra utilizando bootstrap combinado con código CSS hecho a la medida. Ejemplo:
+<code class="language-css">
+<pre>
+@media only screen and (max-width: 767px) {
+    .raleyway {
+        font-size: clamp(1rem, 0.043rem + 1.583vw, 3rem) !important;
+    }
+}
+
+</pre>
+</code>
         </p>
     </section>
     
@@ -90,66 +107,98 @@
         </style>
     </section>
 
-    <section>
-        <figure class="mx-2 my-2 col-12 col-md-3 mx-2" style="float:left;">
-            <img src="./p/parhikuni.com/venta.parhikuni.png" alt="" width="100%">
-            <figcaption>Selección de corrida</figcaption>
-        </figure>
-        <figure class="mx-2 my-2 col-12 col-md-3 mx-2" style="float:left;">
-            <img src="./p/parhikuni.com/venta.parhikuni.asientos.png" alt="" width="100%">
-            <figcaption>Selección de asientos</figcaption>
-        </figure>
+    <section class="col-12 row">
         <p class="px-2">
             Un complemento a este sitio es el cambio visual que se hizo en https://ventas.parhikuni.com.mx, donde cambiamos los
-            estilos CSS.
+            estilos CSS. (A continuación)
         </p>
+        <figure class="mx-auto my-2 col-6 col-md-4 float-start" style="float:left;">
+            <img src="./p/parhikuni.com/venta.parhikuni.png" alt="" width="100%" style="max-height: 65vh;">
+            <figcaption>Selección de corrida</figcaption>
+        </figure>
+        <figure class="mx-auto my-2 col-6 col-md-4 float-start" style="float:left;">
+            <img src="./p/parhikuni.com/venta.parhikuni.asientos.png" alt="" width="100%" style="max-height: 65vh;">
+            <figcaption>Selección de asientos</figcaption>
+        </figure>
     </section>
     <section>
         <h4>Blog</h4>
         <p class="px-2">
             Añadí un editor de texto privado para el blog, este editor es muy sencillo y sólo permite texto plano, pero es suficiente para las necesidades de la empresa. Funciona con algunos atributos html y css pero para minimizar el uso de estos lenguajes se manejan los elementos multimedia con la misma sintaxis de los objetos Json.
         </p>
-        <code>
-            {
-                "tipo":"image",
-                "id":1,
-                "titulo":"imagen a la derecha,
-                 en línea con el texto",
-                "alinear":"derecha"
-            }
-        </code>
+<pre><code class="language-json">{
+    "tipo":"image",
+    "id":1,
+    "titulo":"imagen a la derecha, en línea con el texto",
+    "alinear":"derecha"
+}
+</code></pre>
         <p class="px-2">
             Después se procesa el texto con funciones bien perronas, de PHP para renderizar el texto en html.
             <br>
             Primero se encuentra el patró de texto <i>{ "" : "" }</i> con la función <i>preg_replace_callback</i>, se le envía como argumentos la clase y la función que procesará el texto y el texto a procesar.
         </p>
-        <code>
-            $reemp=preg_replace_callback(
-            '/{.*?}/',
-            [$this,'procesarJson'],
-            $this->descripcion
-            );
-        </code>
+<pre><code class="language-php">$reemp=preg_replace_callback(
+    '/{.*?}/',
+    [$this,'procesarJson'],
+    $this->descripcion
+);
+
+private function procesarJson($txt, $preview=false){
+    try {
+        //Si se puede convertir a JSON se trata de un objeto válido.
+        $decoded=json_decode($txt[0], false);
+    } catch (Exception $e) {
+        throw $th;
+    }
+    try {
+        //Se verifica el tipo de objeto y se procesa según corresponda.
+        switch ($decoded->tipo) {
+            case 'video': //imagenes, videos y audios se mandan a esta función
+                return $preview ? "" : self::procesarMultimedia($decoded);
+            break;
+            case 'url':
+                return $preview ? $decoded->texto : self::procesarUrl($decoded);
+            break;
+            // OTROS
+            // OTROS
+            // OTROS
+            case 'titulo':
+                return $preview ? $decoded->texto : "<h2 class='titulo4-res titulo-anim checkScroll' scrollfunction='tituloAnim' scrollfunctionrepeat='0'>".$decoded->texto."</h2>";
+            break;
+    } catch (\Throwable $th) {
+            return "[]";
+        }
+    }
+}
+</code></pre>
         <p class="px-2">
             Dependiendo del tipo de contenido se puede recuperar imagenes, videos, audios, previamente subidos, se les da un tamaño, alineación, texto descriptivo o si es código de ejemplo se escapa el texto.
             <br>
             <b>Resultado:</b>
         </p>
-<code><pre>&lt;figure class="col-12 col-md-6 multimedia-post enable-preview" style=" float:left; "&gt;
+<pre><code class="language-html">&lt;figure class="col-12 col-md-6 multimedia-post enable-preview" style=" float:left; "&gt;
     &lt;img class="media-content" src="https://parhikuni.com/resources/img/blog/1__parhikuniwhatsapplogo.jpg"
         title="imagen a la izquierda, precedida por un salto de línea"&gt;
     &lt;figcaption&gt;&lt;i class="multimeda-titulo"&gt;imagen a la izquierda, precedida por un salto de línea&lt;/i&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
-</pre></code>
+</code></pre>
     </section>
     <section>
         <b>Versión 2019</b>
+        <br>
         <figure class="mx-2 my-2 col-12 col-md-6 mx-2" style="float:left;">
             <img src="./p/parhikuni.com/web2019.png" alt="" width="100%">
             <figcaption><a href="https://web.archive.org/web/20200125051253/http://www.parhikuni.com/">Ver en waybackmachine</a></figcaption>
         </figure>
         <p class="px-2">
-            Este fue el primer rediseño que hice del sitio web de Parhíkuni durante 2019, que a diferencia del diseño anterior es una versión más limpia y estructurada y ya con un diseño tresponsivo/adaptativo.
+            Este fue el primer rediseño que hice del sitio web de Parhíkuni durante 2019, que es una versión más limpia y estructurada y ya con un diseño tresponsivo/adaptativo.
         </p>
     </section>
 </div>
+
+<script>
+    $(document).ready(() => {
+        hljs.highlightAll();
+    });
+</script>

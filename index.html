@@ -14,54 +14,55 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-        jQuery.fn.loadHTML = function (url, replacehistory=true) {
-            let page = getParameters('p');
-
-            var thisElement = this;
-            console.log("cargando: "+url);
-            var fadeTime=200;
-            $.ajax({
-                type: 'GET',
-                url: url + ".html",
-                dataType: 'text',
-                beforeSend: function () {
-                    //$("#loader_img").css("display", "block");
-                },
-                success: function (data) {
-                    $("main").fadeOut(fadeTime);
-                    setTimeout(() => {
-                        $("main").empty();
-                        $("main").html(data).fadeIn(fadeTime);
-
+        var currentView="";
+        jQuery.fn.loadHTML = function (requestedUrl, replacehistory=true) {
+            if(currentView!= requestedUrl){
+                currentView = requestedUrl;
+                console.log("cargando: "+requestedUrl);
+                var fadeTime=200;
+                $.ajax({
+                    type: 'GET',
+                    url: requestedUrl + ".html",
+                    dataType: 'text',
+                    beforeSend: function () {
+                        //$("#loader_img").css("display", "block");
+                    },
+                    success: function (data) {
+                        $("main").fadeOut(fadeTime);
                         setTimeout(() => {
-                            if(replacehistory){
-                                window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+url);
-                            }
-                            $("main img").click(function () {
-                                imgPreview(this);
-                            });
-                        }, fadeTime);
-
-                    }, fadeTime);
-
-
-                },
-                error: function (e) {
-                    console.log(e.message);
-                    $.ajax({
-                        type: 'GET',
-                        url: "404.html",
-                        success: function (data) {
                             $("main").empty();
-                            $("main").html(data);
-                        },
-                        error: function (e) {
-                            console.log(e.message);
-                        }
-                    });
-                }
-            });
-            ocultarSidebarResponsivo();
+                            $("main").html(data).fadeIn(fadeTime);
+    
+                            setTimeout(() => {
+                                if(replacehistory){
+                                    window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+requestedUrl);
+                                }
+                                $("main img").click(function () {
+                                    imgPreview(this);
+                                });
+                            }, fadeTime);
+    
+                        }, fadeTime);
+    
+    
+                    },
+                    error: function (e) {
+                        console.log(e.message);
+                        $.ajax({
+                            type: 'GET',
+                            url: "404.html",
+                            success: function (data) {
+                                $("main").empty();
+                                $("main").html(data);
+                            },
+                            error: function (e) {
+                                console.log(e.message);
+                            }
+                        });
+                    }
+                });
+                ocultarSidebarResponsivo();
+            }
         }
 
         function ocultarSidebarResponsivo(){
@@ -126,6 +127,10 @@
         }
         p{
             text-align: justify;
+        }
+        figure img, figure video, figure audio{
+            /* border: 1px solid gray; */
+            box-shadow: -1px 1px 5px gray;
         }
         figure img, figure{
             max-width: 100%;
