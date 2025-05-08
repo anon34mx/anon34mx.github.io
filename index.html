@@ -30,11 +30,13 @@
                     },
                     success: function (data) {
                         $(".window").addClass("closed");
+                        $(".window").removeClass("full");
                         setTimeout(() => {
                             $("main").html(data);//.fadeIn(fadeTime);
 
                             setTimeout(() => {
                                 $(".window").removeClass("closed");
+                                $(".window").addClass("full");
                                 $( ".window" ).resizable().draggable({ containment: ".containment-wrapper", scroll: false });
                                 $( ".window" ).css("transition","0s");
                                 if(replacehistory){
@@ -83,6 +85,14 @@
             }else{
                 $("body").removeClass("sb-sidenav-toggled");
             }
+        }
+
+        function close(obj){
+            console.log(typeof(obj) == "string")
+            if(typeof(obj) == "string"){
+
+            }
+
         }
     </script>
     <style>
@@ -242,13 +252,16 @@
         .closed{
             height: 0% !important;
         }
+        .full{
+            height: calc(100vh - 134px);
+        }
         
         .window{
             overflow: hidden;
             border: 2px solid white;
             /* margin: 10px auto; */
             width: 100%;
-            height: calc(100% - 20px);
+            /* height: calc(100% - 20px); */
             background-color: rgb(75 75 75 / 25%);
             color: white;
             backdrop-filter: blur(3px);
@@ -270,7 +283,7 @@
         }
         .window .content{
             overflow: scroll;
-            height: 80vh;
+            height: -webkit-fill-available;
         }
 
         .sb-sidenav-menu{
