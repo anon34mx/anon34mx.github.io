@@ -18,8 +18,7 @@
     <script>
         var currentView="";
         jQuery.fn.loadHTML = function (requestedUrl, replacehistory=true) {
-            if(1){
-            // if(currentView!= requestedUrl){
+            if(currentView!= requestedUrl){
                 currentView = requestedUrl;
                 console.log("cargando: "+requestedUrl);
                 var fadeTime=200;
@@ -34,21 +33,40 @@
                         $(".window").removeClass("full");
                         setTimeout(() => {
                             var newWindow=$.parseHTML(data);
+                            var min_btn=$.parseHTML('<button class="btn_min" disabled>__</button>');
+                            var max_btn=$.parseHTML('<button class="btn_max">[ ]</button>');
                             var close_btn=$.parseHTML('<button class="btn_close">X</button>');
                             var id=new Date().getTime();
                             $(close_btn).on("click",function(){
                                 close(id)
                             });
-                            console.log(
-                                $(newWindow).find(".titleBar .btns").append(close_btn)
-                            )
+                            $(max_btn).on("click",function(){
+                                max(id)
+                            });
+                            $(newWindow).find(".titleBar .btns").empty().append(min_btn, max_btn,close_btn)
                             $(newWindow).attr("id",id);
-                            $("main").append(newWindow);//.fadeIn(fadeTime);
+                            $("main").html(newWindow);//.fadeIn(fadeTime);
 
                             setTimeout(() => {
                                 $(".window").removeClass("closed");
                                 $(".window").addClass("full");
-                                $( ".window" ).resizable().draggable({ containment: ".containment-wrapper", scroll: false });
+                                $( ".window" )
+                                    .resizable({
+                                        minWidth: 250,
+                                        minHeight: 46,
+                                        resize: function (event, ui) {
+                                            if(this.offsetWidth > this.parentElement.offsetWidth){
+                                                $(this).css("width","100%");
+                                            }
+                                            if(this.offsetHeigth > this.parentElement.offsetHeigth){
+                                                $(this).css("Heigth","100%");
+                                            }
+                                        }
+                                        // create: function (event, ui) {
+                                        //     console.log("asd");
+                                        // }
+                                    })
+                                    .draggable({ containment: ".containment-wrapper", scroll: false });
                                 $( ".window" ).css("transition","0s");
                                 if(replacehistory){
                                     window.history.pushState({ "html": "html", "pageTitle": "titulo" }, "", "index.html?p="+requestedUrl);
@@ -99,14 +117,23 @@
         }
 
         async function close(obj){
-            console.log("#"+obj);
+            currentView="";
             $("#"+obj).css("transition","0.5s").addClass("closed");
             await setTimeout(() => {
                 $("#"+obj).fadeOut(200);
             }, 500);
             await setTimeout(() => {
                 $("#"+obj).remove();
+                $("main").html("Elige una opción del menú").css("color","white");
             }, 500);
+        }
+
+        function max(obj){
+            $("#" + obj)
+            .css("width", "inherit")
+            .css("height", "calc(80dvh - 10px)")
+            .css("top", "0")
+            .css("left", "0");
         }
     </script>
     <style>
@@ -117,29 +144,27 @@
             
         }
         ::-webkit-scrollbar {
-            height: 10px;
-            width: 10px;
+            height: 14px;
+            width: 14px;
         }
 
         /* Track */
         ::-webkit-scrollbar-track {
-            background: #f1f1f1bc;
+            background: #cbcbcb7a;
             border: 1px solid gray;
         }
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-            background: #888;
+            background: #ffffff30;
             border: 1px solid white;
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+            background: #55555572;
             border: 1px solid black;
         }
-
-
 
         nav-link{
             cursor: pointer !important;
@@ -155,7 +180,13 @@
             top: 0px;
         }
         main{
-
+            overflow: hidden;
+            height: 100%;
+            transition: .8s;
+            /* outline: 2px solid green; */
+            /* border-bottom: 2px solid greenyellow; */
+            padding: 4px 10px;
+            
         }
         .titulo{
             /* position: sticky; */
@@ -250,19 +281,14 @@
         .sb-nav-link-icon{
             color: #cadce9 !important;
         }
+        .sb-sidenav{
+            border-right: 2px solid white;
+        }
         .sb-sidenav .sb-sidenav-menu .nav .nav-link{
             color:#cadce9;
         }
 
-        main{
-            overflow: hidden;
-            height: 100%;
-            transition: .8s;
-            /* outline: 2px solid green; */
-            border-bottom: 2px solid greenyellow;
-            padding: 0px 20px;
-            
-        }
+
         .closed{
             height: 0% !important;
         }
@@ -288,21 +314,57 @@
             flex-wrap: nowrap;
             justify-content: space-between;
             border-bottom: 2px solid white;
+            overflow: hidden;
+        }
+        .titleBar .title{
+            width: 50%;
+            max-width: 50%;
+            min-width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .titleBar .btns{
+            width: 50%;
+            max-width: 50%;
+            min-width: 100px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+        }
+        .titleBar button:disabled{
+            color: darkgray;
         }
         .titleBar button{
             width: 30px;
             height: 30px;
-            border: 1px solid black;
-            background-color: white;
+            border: 2px solid white;
+            border-radius: 0.3rem;
+            background-color: darkslategray;
+            color: white;
+            font-weight: bold;
+            margin: 0 2px;
+            padding: 0;
+        }
+        .titleBar button.btn_min{
+            background-color: #ffae0082;
+        }
+        .titleBar button.btn_max{
+            background-color: #a5e60082;
+        }
+        .titleBar button.btn_close{
+            background-color: #ff000082;
         }
         .window .content{
-            overflow: scroll;
-            height: -webkit-fill-available;
-            min-width: 300px;
-            min-height: 100px;
-
+            overflow: auto;
+            width: calc(100% - 0px);
+            height: calc(100% - 47px);
+            min-width: inherit;
+            min-height: inherit;
         }
 
+        .sb-sidenav-dark{
+            background-color: #21252963;
+        }
         .sb-sidenav-menu{
             backdrop-filter: blur(2px);
         }
@@ -312,6 +374,10 @@
         .sb-nav-link-icon{
             color: white !important;
             text-shadow: 0 0 2px black, 0 0 4px black;
+        }
+
+        footer{
+            backdrop-filter: blur(2px);
         }
     </style>
     <script>
