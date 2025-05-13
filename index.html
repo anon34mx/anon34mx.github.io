@@ -18,7 +18,8 @@
     <script>
         var currentView="";
         jQuery.fn.loadHTML = function (requestedUrl, replacehistory=true) {
-            if(currentView!= requestedUrl){
+            if(1){
+            // if(currentView!= requestedUrl){
                 currentView = requestedUrl;
                 console.log("cargando: "+requestedUrl);
                 var fadeTime=200;
@@ -32,7 +33,17 @@
                         $(".window").addClass("closed");
                         $(".window").removeClass("full");
                         setTimeout(() => {
-                            $("main").html(data);//.fadeIn(fadeTime);
+                            var newWindow=$.parseHTML(data);
+                            var close_btn=$.parseHTML('<button class="btn_close">X</button>');
+                            var id=new Date().getTime();
+                            $(close_btn).on("click",function(){
+                                close(id)
+                            });
+                            console.log(
+                                $(newWindow).find(".titleBar .btns").append(close_btn)
+                            )
+                            $(newWindow).attr("id",id);
+                            $("main").append(newWindow);//.fadeIn(fadeTime);
 
                             setTimeout(() => {
                                 $(".window").removeClass("closed");
@@ -87,12 +98,15 @@
             }
         }
 
-        function close(obj){
-            console.log(typeof(obj) == "string")
-            if(typeof(obj) == "string"){
-
-            }
-
+        async function close(obj){
+            console.log("#"+obj);
+            $("#"+obj).css("transition","0.5s").addClass("closed");
+            await setTimeout(() => {
+                $("#"+obj).fadeOut(200);
+            }, 500);
+            await setTimeout(() => {
+                $("#"+obj).remove();
+            }, 500);
         }
     </script>
     <style>
@@ -284,6 +298,9 @@
         .window .content{
             overflow: scroll;
             height: -webkit-fill-available;
+            min-width: 300px;
+            min-height: 100px;
+
         }
 
         .sb-sidenav-menu{
