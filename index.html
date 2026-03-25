@@ -22,7 +22,7 @@
                 var fadeTime=200;
                 $.ajax({
                     type: 'GET',
-                    url: requestedUrl + ".html",
+                    url: "views/"+requestedUrl + "/index.html",
                     dataType: 'text',
                     beforeSend: function () {
                         //$("#loader_img").css("display", "block");
@@ -202,7 +202,7 @@
         function autoload(replacehistory=true){
             let page = getParameters('p');
             if (page == null || page == undefined || page == "") {
-                $('body').loadHTML('index_main', replacehistory);
+                $('body').loadHTML('about_me', replacehistory);
             } else {
                 $('body').loadHTML(page, replacehistory);
             }
@@ -290,7 +290,7 @@
         </div>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" onclick="$('body').loadHTML('index_main');">🏠 Inicio</a>
+        <a class="navbar-brand ps-3" onclick="$('body').loadHTML('about_me');">🏠 Inicio</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -339,7 +339,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" onclick="$('body').loadHTML('index_main');">
+                        <a class="nav-link" onclick="$('body').loadHTML('about_me');">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                             Sobre mí
                         </a>
@@ -362,6 +362,7 @@
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-chatbot');">Chatbot</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-dti');">DTI/directorio</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('p/parhikuni-SI');">Sistema Integral</a>
+                                <a class="nav-link" onclick="$('body').loadHTML('p/ewaste');">eWaste Group</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#proyectosPersonales" aria-expanded="false"
@@ -374,7 +375,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/homepagepro');">HomePagePro</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/pcAlly');">PC Ally</a>
-                                <a class="nav-link" onclick="$('body').loadHTML('pp/rainmeter_mirrorsEdge');">Rainmeter</a>
+                                <a class="nav-link" onclick="$('body').loadHTML('pp/rainmeter');">Rainmeter</a>
                                 <a class="nav-link" onclick="$('body').loadHTML('pp/escritorio');">Mi escritorio</a>
                             </nav>
                         </div>

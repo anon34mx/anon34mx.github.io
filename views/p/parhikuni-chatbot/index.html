@@ -1,0 +1,132 @@
+<div class="col-12 row mx-0 px-2 blogCont">
+    <h1 class="titulo">Parhikuni - chatbot</h1>
+    <section class="mb-2">
+        <div style="
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            display: block;
+            overflow: hidden;
+            pointer-events: none;
+        ">
+            <div id="splash"
+                style="z-index: 2;width: 50vw;height: 50vh;top: 0px;left: 0px;background-color: white;/* display: none; */">
+                <div style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);">
+                    <img src="./views/p/parhikuni-chatbot/Ripple-2.9s-207px.svg" style="width: 50vw;">
+                </div>
+                <div style="position: absolute;
+                    width: 240px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);">
+                    <img src="./views/p/parhikuni-chatbot/parhikuni rojo borde blanco.png" style="width: inherit;">
+                </div>
+            </div>
+            <figcaption class="col-12"><i>Pantalla de carga</i></figcaption>
+        </div>
+    </section>
+    <section>
+        <p>
+            Esta es una capa sobrepuesta al chat ya existente para servicio al cliente, donde la persona del área de atención al cliente brinda la información de los servicios y también ofrece la venta por teléfono. Este simple bot cuenta con opciones predefinidas en forma de botones para hacer más sencillo su uso y evitar errores de escritura de texto, las opciones son ir al inicio, consultar horarios, ver informaciónde los destinos, ver información de cómo facturar, nuestros horarios de contacto, información sobre el servicio de paquetería, lo mismo con la renta de autobuses, enlace a la publicación de vacantes y por último el acceso a chatear con personal de la empresa para algún detalle que no esté presente. Lo primero que vemos al entrar es una animación de carga que añadí para dar algo de atractivo visual y aparentar un tiempo de carga menor. Después pasamos ya al bot con un mensaje de bienvenida, que también, igual que muchos proyectos cuenta con una interface adaptativa-responsiva.
+            <br>
+            Al ser código 100% propio se presta para implementar cualquier cosa necesaria como otros tipos de entradas de datos como fechas o el envío de imágenes.
+        </p>
+    </section>
+    <section>
+        <p>A continuación una demostración en vivo. Algunas funciones podrían no estar disponibles.</p>
+<div id="contechats">
+    <div id="tituloschats">
+        <h1>
+            Atención a clientes
+        </h1>
+        <img src="./views/p/parhikuni-chatbot/parhikuni rojo borde blanco.png"
+            style="width: 132px;z-index: 0;position: relative;left: 70%;top: -40px;"></div>
+
+    <div class="contefondochat">
+        <div id="fondoconten">
+            <div id="liston">
+                <img id="avatar" src="./views/p/parhikuni-chatbot/avatar.png" style="">
+                <div id="inforclient">
+                    <span id="nom_client">
+                        <p>Bienvenid@</p>
+                    </span>
+                    <span id="te_atiende">
+                        <p>Te atiende Irma</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contefondochat">
+                <div id="areachats">
+                    <div id="001_estimado usuario" class="usuconectad .bienvenida">
+                        <div id="content_001" class="content mCustomScrollbar _mCS_4">
+                            <div class="mCustomScrollBox mCS-light" id="mCSB_4" style="height: 100%;max-width:100%;">
+                                <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
+                                    <div class="conversacion_us">
+                                        <div class="nombres_pers1">Irma</div>
+                                        <div class="divContainerUp">Bienvenido al sistema de atención a cliente de
+                                            Parhíkuni.<br>Lamentamos no estar disponibles para responderle en este
+                                            momento pero aún podemos ayudarlo.</div>
+                                    </div>
+                                </div>
+                                <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div class="mCSB_dragger" style="position: absolute; top: 0px;"
+                                            oncontextmenu="return false;">
+                                            <div class="mCSB_dragger_bar" style="position:relative;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                                <div class="conversacion_us">
+                                    <div class="nombres_pers1">Irma</div>
+                                    <div class="divContainerUp" onclick="">Seleccione un botón de la parte inferior.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typing"><img src="./views/p/parhikuni-chatbot/three-dots.svg" style="height: inherit;"></div>
+                </div>
+                <div id="separador" style="display: block;width: 100%;height: 1px;background: darkgray;"></div>
+                <div id="bot">
+                    <div class="cont-bot"><button class="chat-btn"
+                            onclick="bot(&quot;btn_inicio&quot;,&quot;%uD83C%uDFE0%20Inicio&quot;,&quot;undefined&quot;)"><span>🏠
+                                Inicio</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_horarios&quot;,&quot;%uD83D%uDD50%20Horarios&quot;,&quot;&quot;)"><span>🕐
+                                Horarios</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_destinos&quot;,&quot;%uD83C%uDF0D%20Destinos&quot;,&quot;&quot;)"><span>🌍
+                                Destinos</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_facturacion&quot;,&quot;%uD83E%uDDFE%20Facturaci%F3n&quot;,&quot;&quot;)"><span>🧾
+                                Facturación</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_contacto&quot;,&quot;%uD83D%uDCDE%20Contacto&quot;,&quot;&quot;)"><span>📞
+                                Contacto</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_paqueteria&quot;,&quot;%uD83D%uDCE6%20Paqueter%EDa&quot;,&quot;&quot;)"><span>📦
+                                Paquetería</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_turismo&quot;,&quot;%uD83D%uDE8C%20Renta%20de%20autobuses&quot;,&quot;&quot;)"><span>🚌
+                                Renta de autobuses</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_vacantes&quot;,&quot;%uD83D%uDC77%u200D%u2642%uFE0F%uD83D%uDC77%u200D%u2640%uFE0F%20Vacantes&quot;,&quot;&quot;)"><span>👷&zwj;♂️👷&zwj;♀️
+                                Vacantes</span></button><button class="chat-btn"
+                            onclick="bot(&quot;btn_servicios&quot;,&quot;%uD83D%uDCD1%20Clases%20de%20Servicios&quot;,&quot;&quot;)"><span>📑
+                                Clases de Servicios</span></button><button class="chat-btn"
+                            onclick="habilitarChat(true);"><span>💻 Chat</span></button></div>
+                </div>
+            </div>
+
+            <div class="rowsenvio" style="display: none;">
+                <textarea name="emails" id="emails" placeholder="Mensaje"></textarea>
+                <button id="envioemails" class="btnchats" title="Enviar"><i class="fa fa-paper-plane"
+                        aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    </section>
+</div>
+
+<link rel="stylesheet" href="./views/p/parhikuni-chatbot/chat.css">
+<script src="./views/p/parhikuni-chatbot/bot.js"></script>

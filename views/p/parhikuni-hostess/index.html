@@ -1,0 +1,97 @@
+<div class="col-12 row mx-0 px-2 blogCont">
+    <h1 class="titulo">Hostess</h1>
+    <section>
+        <figure class="col-4" style="float: left;">
+            <img src="./views/p/parhikuni-hostess/01.PNG" alt="">
+            <figcaption>Login</figcaption>
+        </figure>
+        <p>
+            Este sistema se creó para el momento de abordar a un autobús.
+            <br>
+            El pasajero llega con su boleto físico o digital, la Hostess escanea el boleto, el sistema hace una serie de validaciones para saber si los datos del boleto son correctos, después se procede a pesar el equipaje del pasajero, con una bascula conectada por medio de un puerto serial al navegador, si excede del límite permitido de 25KG se genera un costo de $15 pesos por cada 5KG, después se procede con el pago y se manda a imprimir en papel térmico un comprobante con el que el pasajero pueda recuperar su equipaje al llegar a su destino y una etiqueta foliada por el sistema para cada pieza, sea maleta, mochila, bolsa, etc.
+        </p>
+    </section>
+    
+    <section>
+        <figure class="col-4" style="float: left;">
+            <img src="./views/p/parhikuni-hostess/02.PNG" alt="">
+            <figcaption>Operación del sistema</figcaption>
+        </figure>
+        <p>
+            Cuando el autobús sale también se imprime la relación de pasajeros con los equipajes por si se requiere identificar al dueño en alguna caseta por órdenes de la autoridad o para aclaraciones, así mismo al terminar el turno se genera el corte deventa. Este sistema corre una aplicación hecha con Node para poder enviar a la impresora los PDF resultantes de los procesos, así como antes se usaba para gestionar la conexión serial con la bascula y enviar la información a la web.
+        </p> 
+
+    </section>
+    <section>
+        <figure class="col-6" style="float: left;">
+            <img src="./views/p/parhikuni-hostess/carro.jpg" alt="">
+            <figcaption>Propuesta de kiosko/carrito para instalación del hardware</figcaption>
+        </figure>
+    </section>
+<section>
+    <b>Cosas que no te enseñan en la escuela: conexión serial</b>, que sí, nos enseñan cómo se ve y nos dicen que es un puerto viejo y ya no se usa porque el usb es una maravilla (lo dejo a criterio de cada quién). Sí, los navegadores web nos permiten, para sea cual sea nuestro propósito conectar dispositivos de conexión serial, aunque muchos tienen conector USB siguen usando el protocolo, en este caso las básculas para calcular el sobre equipaje y cobrar la diferencia.
+    <pre>
+<code id="crear_disponibilidad" class="language-javascript" style="padding-top: 0;">
+navigator.serial.addEventListener("connect", (event) => {
+    // Cuando conectemos un dispositivo hará la conexión con el siguiente método
+    serial();
+});
+
+
+async function serial(){
+    // omoti algunas partes pero en escencia es esto
+    // Obtener puertos
+    ports = await navigator.serial.getPorts();
+
+    await ports.forEach(port => {
+        console.log(port);
+    });
+
+    await port.open({
+        baudRate: 9600
+    });
+
+    const textDecoder = new TextDecoderStream();
+    const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+    const reader = textDecoder.readable.getReader();
+
+    while (true) {
+        const { value, done } = await reader.read();
+        const { value, done } = await reader.read();
+        if (done) {
+            // Allow the serial port to be closed later.
+            reader.releaseLock();
+            break;
+        }
+
+        // contenido utilizale
+        buffer = await buffer + value.trim();
+    }
+}
+</code>
+</pre>
+</section>
+    <section>
+        <div class="lineaSeparador"></div>
+        <model-viewer src="./views/p/parhikuni-hostess/hostess1.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls
+            environment-image="./views/pp/escritorio/sanitario_luz.jpg"
+            skybox-image="./views/pp/escritorio/sanitario.jpg"
+            skybox-height="25.0m"
+            shadow-intensity="5"
+            shadow-softness="0.8"
+            style="
+                width: 100%;
+                height: 600px;
+            ">
+        </model-viewer>
+        <script type="module" src="./js/model-viewer.min.js"></script>
+        <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+        <!-- <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script> -->
+    </section>
+
+</div>
+<script>
+    $(document).ready(() => {
+        hljs.highlightAll();
+    });
+</script>
