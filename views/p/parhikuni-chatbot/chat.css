@@ -5,7 +5,7 @@
 	--rojo:#ca0700;
 	--rojoHover:#fe3a1c;
 	--gris:#e8e8e8;
-	--rosa:#f3c6c6;
+	--rosa:#e6b3b3;
 }
 /*@font-face {
   font-family: 'globe';
@@ -468,6 +468,7 @@ margin-left:20px;*/
 	text-align: left;
 	color: var(--rojo);
 	font-weight: bold;
+	text-shadow: none;
 	/*font-size: 1.1em;*/
 }
 

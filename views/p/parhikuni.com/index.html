@@ -1,20 +1,20 @@
 <div class="col-12 row mx-0 px-2 blogCont">
     <h1 class="titulo">Parhíkuni.com</h1>
-    <section>
-        <figure class="col-12 col-sm-4 mx-2 my-2 float-end">
-            <img src="./views/p/parhikuni.com/parhikuni.com.png" alt="Vista previa de Parhikuni.com" width="100%">
+    <section class="panel px-2 mb-3">
+        <figure class="col-12 col-sm-4 px-2 my-2 float-end media">
+            <img class="media-frame" src="./views/p/parhikuni.com/parhikuni.com.png" alt="Vista previa de Parhikuni.com" width="100%">
             <a href="https://parhikuni.com/">
                 <figcaption>Ir a Parhikuni.com</figcaption>
             </a>
         </figure>
-        <p class="px-2">
+        <p>
             Esta es la web principal ante el público de Destinos Parhíkuni SA de CV, aquí se promociona la venta en línea y se publicitan los distintos servicios que ofrece la empresa: viajes de ruta, paquetería y alquiler de autobuses.
             <br>
             Este sitio web cuenta con una interface moderna, adaptativa y responsiva para brindar la mejor experiencia al cliente desde cualquier resolución de pantalla, fácil legibilidad del texto, el texto es completamente responsivo, y visualmente atractiva. 
             <br>
             Este sistema fue creado con PHP, utilizando el framework Laravel, bootstrap y para la base dedatos MySql.
         </p>
-        <p class="px-2">
+        <p>
             En la sección de Destinos encontramos los lugares a dónde podemos viajar y los medios de contacto para cada
             oficina;
             en Factura, una breve guía de cómo tramitar la factura de su compra; el Blog, es la nueva sección donde
@@ -25,11 +25,9 @@
             se
             habla sobre la historia de la empresa.
         </p>
-    </section>
-    
-    <section>
-        <b>Usabilidad, responsividad, adaptabilidad</b>
+
         <p>
+            <b>Usabilidad, responsividad, adaptabilidad</b>
             Este sitio web fue planeado para ser utilizado en dispositivos móviles, tabletas y computadoras de escritorio independientemente del tamaño de la pantalla, cumpliendo los estándares de diseño responsivo y adaptativo. Al cambiar el tamaño de la ventana del navegador web algunos elementos cambian su tamaño y orden, el texto siempre es legible al recibir un tamaño proporcional. Esto se logra utilizando bootstrap combinado con código CSS hecho a la medida. Ejemplo:
 <code class="language-css">
 <pre>
@@ -44,23 +42,23 @@
         </p>
     </section>
     
-    <section>
+    <section class="panel col-md-6 px-2 mb-3">
         <b>Animaciones</b>
         <br>
-        <figure class="mx-2 my-2 col-12 col-md-6 " style="float:left;">
-            <img src="./views/p/parhikuni.com/dibujo-metro.svg" alt="" width="100%">
+        <figure class="mx-2 my-2 col-12 col-md-6 float-start media">
+            <img class="media-frame" src="./views/p/parhikuni.com/dibujo-metro.svg" alt="" width="100%">
             <figcaption>Animación descartada en SVG que muestra las rutas estilo mapa de metro</figcaption>
         </figure>
 
-        <div class="col-12 col-md-6 my-2 mb-4" style="position: relative;float: left;display: block;width: 300px;height: 300px;margin-bottom: 40px;z-index: 0;">
-                <div id="pantallaCarga" class="cargando-24" style="display: block;">
+        <figure class="col-12 col-md-6 my-2 mb-4" style="position: relative;float: left;display: block;width: 300px;height: 300px;margin-bottom: 40px;z-index: 0;">
+                <div id="pantallaCarga" class="cargando-24 media-frame" style="display: block;">
                     <img class="lineas" src="https://parhikuni.com/resources/img/Loading_0.svg" alt="">
                     <img class="p" src="https://parhikuni.com/resources/img/Loading_1.svg" alt="">
                     <!-- <i>Pantalla de carga con CSS</i> -->
-                    <div style="position: absolute;bottom: -10px;width: 100%;text-align: center;background: white;
-                    ">Pantalla de carga en CSS</div>
                 </div>
-        </div>
+                    <div style="position: absolute;bottom: 0px;width: 100%;text-align: center;background: white;color:black;text-shadow:none;
+                    ">Pantalla de carga en CSS</div>
+        </figure>
         <style>
             /* PANTALLA DE CARGA */
             .cargando-24 {
@@ -107,21 +105,21 @@
         </style>
     </section>
 
-    <section class="col-12 row">
-        <p class="px-2">
+    <section class="panel col-md-6 px-2 mb-3">
+        <p class=" px-2">
             Un complemento a este sitio es el cambio visual que se hizo en https://ventas.parhikuni.com.mx, donde cambiamos los
             estilos CSS. (A continuación)
         </p>
-        <figure class="mx-auto my-2 col-6 col-md-4 float-start" style="float:left;">
+        <figure class="mx-auto my-2 col-6 col-md-4 float-start">
             <img src="./views/p/parhikuni.com/venta.parhikuni.png" alt="" width="100%" style="max-height: 65vh;">
             <figcaption>Selección de corrida</figcaption>
         </figure>
-        <figure class="mx-auto my-2 col-6 col-md-4 float-start" style="float:left;">
+        <figure class="mx-auto my-2 col-6 col-md-4 float-end">
             <img src="./views/p/parhikuni.com/venta.parhikuni.asientos.png" alt="" width="100%" style="max-height: 65vh;">
             <figcaption>Selección de asientos</figcaption>
         </figure>
     </section>
-    <section>
+    <section class="panel px-2 mb-3">
         <h4>Blog</h4>
         <p class="px-2">
             Añadí un editor de texto privado para el blog, este editor es muy sencillo y sólo permite texto plano, pero es suficiente para las necesidades de la empresa. Funciona con algunos atributos html y css pero para minimizar el uso de estos lenguajes se manejan los elementos multimedia con la misma sintaxis de los objetos Json.
@@ -184,7 +182,7 @@ private function procesarJson($txt, $preview=false){
 &lt;/figure&gt;
 </code></pre>
     </section>
-    <section>
+    <section class="panel px-2 mb-3">
         <b>Versión 2019</b>
         <br>
         <figure class="mx-2 my-2 col-12 col-md-6 mx-2" style="float:left;">

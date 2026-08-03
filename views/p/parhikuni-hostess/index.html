@@ -1,19 +1,19 @@
 <div class="col-12 row mx-0 px-2 blogCont">
     <h1 class="titulo">Hostess</h1>
-    <section>
-        <figure class="col-4" style="float: left;">
+    <section class="panel px-2 mb-3">
+        <figure class="media col-4" style="float: left;">
             <img src="./views/p/parhikuni-hostess/01.PNG" alt="">
             <figcaption>Login</figcaption>
         </figure>
-        <p>
+        <p class="px-2">
             Este sistema se creó para el momento de abordar a un autobús.
             <br>
             El pasajero llega con su boleto físico o digital, la Hostess escanea el boleto, el sistema hace una serie de validaciones para saber si los datos del boleto son correctos, después se procede a pesar el equipaje del pasajero, con una bascula conectada por medio de un puerto serial al navegador, si excede del límite permitido de 25KG se genera un costo de $15 pesos por cada 5KG, después se procede con el pago y se manda a imprimir en papel térmico un comprobante con el que el pasajero pueda recuperar su equipaje al llegar a su destino y una etiqueta foliada por el sistema para cada pieza, sea maleta, mochila, bolsa, etc.
         </p>
     </section>
     
-    <section>
-        <figure class="col-4" style="float: left;">
+    <section class="panel px-2 mb-3">
+        <figure class="media col-4" style="float: left;">
             <img src="./views/p/parhikuni-hostess/02.PNG" alt="">
             <figcaption>Operación del sistema</figcaption>
         </figure>
@@ -22,13 +22,7 @@
         </p> 
 
     </section>
-    <section>
-        <figure class="col-6" style="float: left;">
-            <img src="./views/p/parhikuni-hostess/carro.jpg" alt="">
-            <figcaption>Propuesta de kiosko/carrito para instalación del hardware</figcaption>
-        </figure>
-    </section>
-<section>
+<section class="panel px-2 mb-3">
     <b>Cosas que no te enseñan en la escuela: conexión serial</b>, que sí, nos enseñan cómo se ve y nos dicen que es un puerto viejo y ya no se usa porque el usb es una maravilla (lo dejo a criterio de cada quién). Sí, los navegadores web nos permiten, para sea cual sea nuestro propósito conectar dispositivos de conexión serial, aunque muchos tienen conector USB siguen usando el protocolo, en este caso las básculas para calcular el sobre equipaje y cobrar la diferencia.
     <pre>
 <code id="crear_disponibilidad" class="language-javascript" style="padding-top: 0;">
@@ -71,7 +65,11 @@ async function serial(){
 </code>
 </pre>
 </section>
-    <section>
+    <section class="panel px-2 mb-3">
+        <figure class="mx-0 col-12 media" style="float: left;">
+            <img src="./views/p/parhikuni-hostess/carro.jpg" class="col-6 mx-auto">
+            <figcaption>Propuesta de kiosko/carrito para instalación del hardware</figcaption>
+        </figure>
         <div class="lineaSeparador"></div>
         <model-viewer src="./views/p/parhikuni-hostess/hostess1.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls
             environment-image="./views/pp/escritorio/sanitario_luz.jpg"

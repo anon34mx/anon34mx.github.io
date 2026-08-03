@@ -1,0 +1,108 @@
+*{
+    outline: 1px solid yellowgreen;
+}
+html,body{
+    
+}
+nav-link{
+    cursor: pointer !important;
+}
+
+main{
+    /* background: url(./assets/img/technology-1283624_640.jpg); */
+}
+.titulo{
+    position: sticky;
+    top: 56px;
+    background: white;
+    z-index: 1;
+}
+section{
+    /* display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    line-break: auto;
+}
+.lineaSeparador {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    float: none;
+    border-top: 2px solid red;
+    margin: 1rem 0;
+    background-color: red;
+    z-index: -1;
+}
+h2{
+    position: sticky;
+    top: 0px;
+}
+p{
+    text-align: justify;
+}
+figure img, figure video, figure audio{
+    /* border: 1px solid gray; */
+    box-shadow: -1px 1px 5px gray;
+}
+figure img, figure{
+    max-width: 100%;
+}
+figure figcaption{
+    font-style: italic;
+    text-align: center;
+}
+#christian-modal{
+    display: none;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    background: black;
+    position: fixed;
+    z-index: 2;
+    top: 56px;
+    left: 0;
+}
+
+#christian-modal div{
+    width: 100%;
+    height: 100%;
+}
+#christian-modal div *{
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#christian-modal i{
+    position: absolute;
+    color: white;
+    top: 5px;
+    right: 0px;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    background: red;
+    padding: 0 20px;
+}
+
+.imgList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.imgList img{
+    max-width: 80%;
+    width: 70%;
+    height: auto;
+    margin: 0 5px;
+}
+
+.sb-nav-link-icon{
+    color: #cadce9 !important;
+}
+.sb-sidenav .sb-sidenav-menu .nav .nav-link{
+    color:#cadce9;
+}
