@@ -6,6 +6,7 @@
         0 0 5px gray;
   --text-shadow-dark:
         0 0 1px #000000ef,
+        0 0 1px #000000ef,
         0 0 2px #000000ef,
         0 0 5px #000000ef;
     --accent:#2b3e4f;
@@ -15,13 +16,14 @@
   width: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: #ffffff2b;
+  background: #004605;
+  border: 1px solid #00ff00;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ffffffb4;
+  background: #0faf00;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: #11c700;
 }
 ::-webkit-scrollbar-button{
     display: none;
@@ -35,7 +37,7 @@
 body{
     background-color: gray;
     background-image:
-        url(../assets/img/dm2aody-67b867d8-fde1-4611-a953-d8f7de8209dd.jpg) 
+        url(../assets/img/09-01.jpg) 
     ;
     background-repeat: no-repeat;
     background-position: right;
@@ -68,10 +70,11 @@ h1.titulo,h2.titulo,h3.titulo,h4.titulo,h5.titulo,h6.titulo{
 .panel{
     color:white;
     text-shadow:var(--text-shadow-dark);
-    /* backdrop-filter: blur(3px) brightness(0.7); */
-    backdrop-filter: blur(3px) hue-rotate(10deg) saturate(1.4) brightness(0.8);
+    background-color: #00730063;
+    backdrop-filter: blur(4px) hue-rotate(10deg) saturate(1.4) brightness(0.8);
     border: 1px solid #ffffffee;
     border-radius: var(--border-radius);
+    margin-bottom: 2rem !important;
 }
 .media{
   display: block;
@@ -183,7 +186,7 @@ code{
     backdrop-filter: blur(3px);
 } */
  .sb-sidenav-dark .sb-sidenav-footer{
-    background-color: var(--accent) !important;
+    background-color: #00dc0238 !important;
  }
 .sb-sidenav-footer{
     position: absolute;
@@ -195,5 +198,6 @@ code{
 }
 nav, footer{
     color:white;
-    background-color: #2b3e4f;
+    background-color: #00dc0238;
+    backdrop-filter: blur(3px);
 }
