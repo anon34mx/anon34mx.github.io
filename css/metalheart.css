@@ -70,11 +70,12 @@ h1.titulo,h2.titulo,h3.titulo,h4.titulo,h5.titulo,h6.titulo{
 .panel{
     color:white;
     text-shadow:var(--text-shadow-dark);
-    background-color: #00730063;
+    background-color: #0031594a;
     backdrop-filter: blur(4px) hue-rotate(10deg) saturate(1.4) brightness(0.8);
     border: 1px solid #ffffffee;
     border-radius: var(--border-radius);
     margin-bottom: 2rem !important;
+    padding: 4px !important;
 }
 .media{
   display: block;
@@ -166,9 +167,9 @@ code{
     backdrop-filter: blur(2px);
 }
 .sb-sidenav-dark{
-    background-color: #2125290a;
+    background-color: #0031594a;
     color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     border: 1px solid white;
 }
 
@@ -186,7 +187,7 @@ code{
     backdrop-filter: blur(3px);
 } */
  .sb-sidenav-dark .sb-sidenav-footer{
-    background-color: #00dc0238 !important;
+    background-color: #0031594a !important;
  }
 .sb-sidenav-footer{
     position: absolute;
@@ -198,6 +199,6 @@ code{
 }
 nav, footer{
     color:white;
-    background-color: #00dc0238;
+    background-color: #0031594a;
     backdrop-filter: blur(3px);
 }
